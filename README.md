@@ -19,10 +19,9 @@ iosocketdll.dll+3C60
 </b>
 Documented functions
 -----
-**iosocketdll.dll**
+**iosocketdll.dll**<br />
 +3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a>
 <br />
 Contact
 -----
-<br />
 raidcallTW group: 27105202<br />
