@@ -17,11 +17,18 @@ Currently working on:<br />
 <b>
 iosocketdll.dll+3C60
 </b>
-Documented functions
------
-**iosocketdll.dll**<br />
-+3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a>
-<br />
 Contact
 -----
 raidcallTW group: 27105202<br />
+
+Documented functions
+-----
+**iosocketdll.dll**<br />
++3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a><br />
++465D ws2_32.connect<br />
++467B ws2_32.socket<br />
++4681 ws2_32.send<br />
++4687 ws2_32.recv<br />
++4699 ws2_32.listen<br />
++469F ws2_32.bind<br />
+<br />
