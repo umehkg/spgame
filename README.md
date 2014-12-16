@@ -24,6 +24,7 @@ raidcallTW group: 27105202<br />
 Documented functions
 -----
 **iosocketdll.dll**<br />
++1020 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/IsValid.cpp">CClientObject::IsValid<br />
 +3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a><br />
 +465D ws2_32.connect<br />
 +467B ws2_32.socket<br />
