@@ -15,7 +15,7 @@ This repo contains the products and work-in-process for <u>recovered functions</
 <hr>
 Currently working on:<br />
 <b>
-iosocketdll.dll+3C60
+translating multiple functions
 </b>
 Contact
 -----
