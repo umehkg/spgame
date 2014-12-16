@@ -8,5 +8,7 @@ This repo contains the products and work-in-process for <u>recovered functions</
 <b>./src</b>         for recovered C++-style functions<br />
 
 <br />
-Currently working on:
+Currently working on:<br />
+<b>
 iosocketdll.dll+3C60
+</b>
