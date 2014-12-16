@@ -6,3 +6,7 @@ This repo is created by HKG 巫毒兔子, an hobbyist enthusiast in reverse engi
 This repo contains the products and work-in-process for <u>recovered functions</u> in the game client:<br />
 <b>./asm</b>         for raw assembly<br />
 <b>./src</b>         for recovered C++-style functions<br />
+
+<br />
+Currently working on:
+iosocketdll.dll+3C60
