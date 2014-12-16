@@ -12,3 +12,8 @@ Currently working on:<br />
 <b>
 iosocketdll.dll+3C60
 </b>
+
+<br />
+<hr>
+<b>Contact Info</b><br />
+raidcallTW group: 27105202<br />
