@@ -28,7 +28,7 @@ Documented functions
 +2420 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/EncryptMsg.cpp">CGenericMessage::EncryptMsg</a><br />
 +3B60 Encrypt<br />
 +3B90 Decrypt<br />
-+3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a><br />
++3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a> aka MD5::init<br />
 +465D ws2_32.connect<br />
 +467B ws2_32.socket<br />
 +4681 ws2_32.send<br />
