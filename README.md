@@ -1,6 +1,6 @@
 spgame
 ======
-This repo is created by HKG 巫毒兔子 and maintained by our contributors' support, an hobbyist enthusiast in reverse engineering. The project attempts to construct an SPGAME server by reversing the mechanisms in the game client.
+This repo is created by HKG 巫毒兔子, an hobbyist enthusiast in reverse engineering and maintained by our contributors' support. The project attempts to construct an SPGAME server by reversing the mechanisms in the game client.
 
 <br />
 This repo contains the products and work-in-process for <u>recovered functions</u> in the game client:<br />
