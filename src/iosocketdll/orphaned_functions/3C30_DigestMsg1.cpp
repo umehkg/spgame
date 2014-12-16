@@ -1,0 +1,4 @@
+void DigestMsg1(char *param1)
+{
+	memcpy(param1, "\x01\x23\x45\x67\x89\xab\xcd\xef\xfe\xdc\xba\x98\x76\x54\x32\x10\0\0\0\0\0\0\0\0", 0x18);
+}
