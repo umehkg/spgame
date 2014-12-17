@@ -40,13 +40,13 @@ CServerTCPSocket::SendLoop
 +3C60 MD5::transform (verification needed)<br />
 +44E0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/44E0_DigestMsg2.cpp">DigestMsg2</a> 30% done
 <br />
++4686 ws2_32.recv<br />
 +46BC ws2_32.sento<br />
 <br />
 Exact (non-call):<br />
 +465D ws2_32.connect<br />
 +467B ws2_32.socket<br />
 +4681 ws2_32.send<br />
-+4687 ws2_32.recv<br />
 +4699 ws2_32.listen<br />
 +469F ws2_32.bind<br />
 <br />
