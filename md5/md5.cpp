@@ -1,8 +1,11 @@
+#include "stdafx.h"
 /* MD5
 bugfixes by umehkg (https://github.com/umehkg)
-+ resolved buffer overflow issue
-+ replaced sprintf with safe version sprintf_s
++ added header to resolve << overloading issues
 + tested on VC++ 2010 Express
+add functions:
++ to support strings containing null bytes by passing them as char *
++ add support to output digest as char *
 
  converted to C++ class by Frank Thilo (thilo@unix-ag.org)
  for bzflag (http://www.bzflag.org)
@@ -118,6 +121,14 @@ MD5::MD5(const std::string &text)
   init();
   update(text.c_str(), text.length());
   finalize();
+}
+
+//added support for data containing null bytes
+MD5::MD5(const char *srcBuffer, unsigned int srcLength)
+{
+	init();
+	update(srcBuffer, srcLength);
+	finalize();
 }
  
 //////////////////////////////
@@ -349,13 +360,22 @@ std::string MD5::hexdigest() const
  
   return std::string(buf);
 }
+
+void MD5::GetDigest(char *buffer)
+{
+	if (!finalized)
+		return;
+	memcpy(buffer, digest, sizeof(digest));
+}
  
 //////////////////////////////
- 
+
 std::ostream& operator<<(std::ostream& out, MD5 md5)
 {
-  return out << md5.hexdigest();
+  std::string hexDigest = md5.hexdigest();
+  return out << hexDigest;
 }
+
  
 //////////////////////////////
  
@@ -366,3 +386,16 @@ std::string md5(const std::string str)
     return md5.hexdigest();
 }
 
+////////////////////////////////
+std::string md5(const char* buf, unsigned int len)
+{
+	MD5 md5 = MD5(buf, len);
+	return md5.hexdigest();
+}
+///////////////////////////////
+void md5_raw(char* dstBuf, const char* srcBuf, unsigned int srcLen)
+{
+
+	MD5 md5 = MD5(srcBuf, srcLen);
+	md5.GetDigest(dstBuf);
+}
