@@ -17,7 +17,7 @@ class CGenericMessage
 	unsigned long GetType();
 	unsigned long GetSize();
 	unsigned long MakeDigest();
-	bool CheckCheckSum();
+	void EncryptMsg();
 }
 CGenericMessage::CGenericMessage()
 {
@@ -30,40 +30,34 @@ CGenericMessage::CGenericMessage()
 void CGenericMessage::SetBasicHeader(int param1, ulong param2)
 {
 //ecx: packet buffer?
-	*(DWORD *)(LPVOID)ecx = param1;
-	*(DWORD *)(LPVOID)ecx+4 = param2;
-	*(DWORD *)(LPVOID)ecx+8 = 0x2B1C;
+	*(DWORD *)this = param1;
+	*(DWORD *)(this+4) = param2;
+	*(DWORD *)(this+8) = 0x2B1C;
 }
 bool CGenericMessage::CheckError()
 {
-	if( *(DWORD *)(LPVOID)ecx+8 != 0x2B1C )
+	if( *(DWORD *)(this+8) != 0x2B1C )
 		return true;
 	return false;
 }
 void CGenericMessage::SetState(int param1)
 {
-	*(DWORD *)(LPVOID)ecx+0x10 = param1;
+	*(DWORD *)(this+0x10) = param1;
 }
 int CGenericMessage::GetState()
 {
-	return *(DWORD *)(LPVOID)ecx+0x10;
+	return *(DWORD *)(this+0x10);
 }
 unsigned long CGenericMessage::GetType()
 {
-	return *(DWORD *)(LPVOID)ecx+4;
+	return *(DWORD *)(this+4);
 }
 unsigned long CGenericMessage::GetSize()
 {
-	return *(DWORD *)(LPVOID)ecx;
+	return *(DWORD *)this;
 }
-unsigned long CGenericMessage::MakeDigest()
+void __thiscall CGenericMessage::EncryptMsg()
 {
-	//todo
-}
-bool CGenericMessage::CheckCheckSum()
-{
-	//todo stuffs 
-	if (this.MakeDigest() != *(DWORD *)(LPVOID)esi+0xC)
-		return false;
-	
+	*(LPDWORD)(this+0xC) = this->MakeDigest();
+	Encrypt((char *)(this+0x4), *(LPDWORD)this);
 }
