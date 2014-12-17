@@ -39,13 +39,21 @@ CServerTCPSocket::SendLoop
 </a><br />
 +3B60 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B60_EncryptBody.cpp">EncryptBody</a><br />
 +3B90 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B90_DecryptBody.cpp">DecryptBody</a><br />
++3BC0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3BC0_CGenericMessage_InitSocketSub.cpp">CGenericMessage::InitSocketSub</a> <br />
 +3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a> aka MD5::init<br />
 +3C60 MD5::transform (verification needed)<br />
 +38F0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/RecvBuffer/UpdateRecvData.cpp">
 RecvBuffer::UpdateRecvData</a><br />
 +44E0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/44E0_DigestMsg2.cpp">DigestMsg2</a> 30% done
 <br />
++464A ws2_32.setsockopt<br />
 +4656 ws2_32.WSAGetLastError<br />
++465C ws2_32.connect<br />
++4662 ws2_32.WSAAsyncSelect<br />
++4668 ws2_32.inet_addr<br />
++466E ws2_32.ntohs<br />
++4674 ws2_32.ntohl<br />
++467A ws2_32.socket<br />
 +4686 ws2_32.recv<br />
 +46BC ws2_32.sento<br />
 <br />
