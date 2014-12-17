@@ -2,6 +2,10 @@
 bugfixes by umehkg (https://github.com/umehkg)
 + added header to resolve << overloading issues
 + tested on VC++ 2010 Express
+add functions:
++ to support strings containing null bytes by passing them as char *
++ add support to output digest as char *
+
 
  converted to C++ class by Frank Thilo (thilo@unix-ag.org)
  for bzflag (http://www.bzflag.org)
@@ -59,10 +63,12 @@ public:
  
   MD5();
   MD5(const std::string& text);
+  MD5(const char *srcBuffer, unsigned int srcLength);
   void update(const unsigned char *buf, size_type length);
   void update(const char *buf, size_type length);
   MD5& finalize();
   std::string hexdigest() const;
+  void GetDigest(char *buffer);
   friend std::ostream& operator<<(std::ostream&, MD5 md5);
  
 private:
@@ -94,5 +100,6 @@ private:
 };
  
 std::string md5(const std::string str);
- 
+std::string md5(const char* buf, unsigned int len);
+void md5_raw(char* dstBuf, const char* srcBuf, unsigned int srcLen);
 #endif
