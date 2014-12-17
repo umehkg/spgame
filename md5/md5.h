@@ -1,4 +1,8 @@
 /* MD5
+bugfixes by umehkg (https://github.com/umehkg)
++ added header to resolve << overloading issues
++ tested on VC++ 2010 Express
+
  converted to C++ class by Frank Thilo (thilo@unix-ag.org)
  for bzflag (http://www.bzflag.org)
  
@@ -35,6 +39,7 @@ documentation and/or software.
  
 #include <cstring>
 #include <iostream>
+#include <string>
  
  
 // a small class for calculating MD5 hashes of strings or byte arrays
