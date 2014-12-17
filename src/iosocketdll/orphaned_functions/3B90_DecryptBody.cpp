@@ -1,4 +1,4 @@
-void DecryptMsg(char *msgBody, int msgBodyLen)
+void DecryptBody(char *msgBody, int msgBodyLen)
 {
 	if (msgBodyLen <= 0)
 		return;
