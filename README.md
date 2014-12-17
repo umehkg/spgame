@@ -41,6 +41,8 @@ CServerTCPSocket::SendLoop
 +3B90 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B90_DecryptBody.cpp">DecryptBody</a><br />
 +3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a> aka MD5::init<br />
 +3C60 MD5::transform (verification needed)<br />
++38F0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/RecvBuffer/UpdateRecvData.cpp">
+RecvBuffer::UpdateRecvData</a><br />
 +44E0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/44E0_DigestMsg2.cpp">DigestMsg2</a> 30% done
 <br />
 +4656 ws2_32.WSAGetLastError<br />
