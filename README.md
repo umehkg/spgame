@@ -20,7 +20,7 @@ MakeDigest
 Contact
 -----
 raidcallTW group: 27105202<br />
-
+<a href="http://forum6.hkgolden.com/ProfilePage.aspx?userid=195369">(Show Blocked User - 巫毒兔子)</a><br />
 Documented functions
 -----
 **iosocketdll.dll**<br />
