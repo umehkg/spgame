@@ -1,4 +1,9 @@
 /* MD5
+bugfixes by umehkg (https://github.com/umehkg)
++ resolved buffer overflow issue
++ replaced sprintf with safe version sprintf_s
++ tested on VC++ 2010 Express
+
  converted to C++ class by Frank Thilo (thilo@unix-ag.org)
  for bzflag (http://www.bzflag.org)
  
@@ -337,10 +342,10 @@ std::string MD5::hexdigest() const
   if (!finalized)
     return "";
  
-  char buf[33];
+  char *buf = new char[33];
   for (int i=0; i<16; i++)
-    sprintf(buf+i*2, "%02x", digest[i]);
-  buf[32]=0;
+    sprintf_s(buf+i*2, 0x3, "%.2x", digest[i]);
+  *(char *)((unsigned long)buf+32) = 0;
  
   return std::string(buf);
 }
