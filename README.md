@@ -55,6 +55,7 @@ RecvBuffer::UpdateRecvData</a><br />
 +4674 ws2_32.ntohl<br />
 +467A ws2_32.socket<br />
 +4686 ws2_32.recv<br />
++468C ws2_32.WSAStartup<br />
 +46BC ws2_32.sento<br />
 <br />
 Exact (non-call):<br />
