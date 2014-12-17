@@ -29,7 +29,7 @@ Documented functions
 +1020 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/IsValid.cpp">CClientObject::IsValid</a><br />
 +23C0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/MakeDigest.cpp">CGenericMessage::MakeDigest</a><br />
 +2420 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/EncryptMsg.cpp">CGenericMessage::EncryptMsg</a><br />
-+2C10 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/CheckValidMsg.cpp">ClientTCPSocket::CheckValidMsg</a>70% done
++2C10 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/CheckValidMsg.cpp">CClientTCPSocket::CheckValidMsg</a>70% done
 <br>
 +2D50 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/SendLoop.cpp">
 CServerTCPSocket::SendLoop
