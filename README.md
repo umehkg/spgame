@@ -15,7 +15,7 @@ This repo contains the products and work-in-process for <u>recovered functions</
 <hr>
 Currently working on:<br />
 <b>
-MakeDigest
+DigestMsg2
 </b>
 Contact
 -----
@@ -25,8 +25,7 @@ Documented functions
 -----
 **iosocketdll.dll**<br />
 +1020 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/IsValid.cpp">CClientObject::IsValid</a><br />
-+23C0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/MakeDigest.cpp">CGenericMessage::MakeDigest</a> 80% done
-<br />
++23C0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/MakeDigest.cpp">CGenericMessage::MakeDigest</a><br />
 +2420 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/EncryptMsg.cpp">CGenericMessage::EncryptMsg</a><br />
 +2C10 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/CheckValidMsg.cpp">ClientTCPSocket::CheckValidMsg</a>70% done
 <br>
