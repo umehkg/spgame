@@ -31,6 +31,9 @@ Documented functions
 +2420 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CGenericMessage/EncryptMsg.cpp">CGenericMessage::EncryptMsg</a><br />
 +2C10 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/CheckValidMsg.cpp">ClientTCPSocket::CheckValidMsg</a>70% done
 <br>
++2D50 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/SendLoop.cpp">
+CServerTCPSocket::SendLoop
+</a><br />
 +3B60 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B60_EncryptBody.cpp">EncryptBody</a><br />
 +3B90 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B90_DecryptBody.cpp">DecryptBody</a><br />
 +3C30 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3C30_DigestMsg1.cpp">DigestMsg1 </a> aka MD5::init<br />
