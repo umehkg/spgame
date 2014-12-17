@@ -37,6 +37,7 @@ CClientTCPSocket::ReceiveLoop
 +2D50 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/SendLoop.cpp">
 CServerTCPSocket::SendLoop
 </a><br />
++3AD0 <a href="https://github.com/umehkg/spgame/tree/master/src/iosocketdll/classes/SendBuffer">SendBuffer::SendBuffer</a><br />
 +3B60 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B60_EncryptBody.cpp">EncryptBody</a><br />
 +3B90 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3B90_DecryptBody.cpp">DecryptBody</a><br />
 +3BC0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/orphaned_functions/3BC0_CGenericMessage_InitSocketSub.cpp">CGenericMessage::InitSocketSub</a> <br />
