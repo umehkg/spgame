@@ -1,5 +1,10 @@
 Comments
 =====
+18 Dec 2014
+-----
+
+- This is no IP restriction in gng.ini whatsoever (127.0.0.1 unconfirmed). Test Environment: Windows XP SP3 Pro VM running in Windows 8.1 Pro, NAT Network Adapter, IP default
+
 17 Dec 2014
 -----
 - MakeDigest +23CE push eax ;eax is lpBuffer for MD5::DWORD state[4]
