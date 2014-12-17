@@ -4,14 +4,14 @@ bool CClientTCPSocket::CheckValidMsg(class CGenericRcvMsg *param1)
 	unsigned long msgSize = param1->GetSize();
 	if ( (msgSize < 0x14)||(msgSize < 0x4014) )
 	{
-		call near ptr 0FBD15A0h ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType(), msgSize ); //error handler (guessed)
+		logdll.CLog::PrintTimeAndLog ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType(), msgSize ); //error handler (guessed)
 		return;
 	}
 	else
 	{
 		if ( param1->CheckCheckSum() )
 		{
-			call near ptr 0FBD15A0h ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType() );
+			clogdll.CLog::PrintTimeAndLog ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType() );
 			return false;
 		}
 		else //if ( param1->CheckCheckSum() == 0 )
@@ -31,7 +31,7 @@ bool CClientTCPSocket::CheckValidMsg(class CGenericRcvMsg *param1)
 					}
 					else
 					{
-						call near ptr 0FBD15A0h ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType(), param1->GetState(), ?->GetRcvServerState() );
+						logdll.CLog::PrintTimeAndLog ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType(), param1->GetState(), ?->GetRcvServerState() );
 						return false;
 					}
 				}
@@ -44,7 +44,7 @@ bool CClientTCPSocket::CheckValidMsg(class CGenericRcvMsg *param1)
 					}
 					else
 					{
-						call near ptr 0FBD15A0h ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType() );
+						logdll.CLog::PrintTimeAndLog ( ds:0x15B5000, 0, 0x15B5B20, param1->GetType() );
 						return false;
 					}
 				}
