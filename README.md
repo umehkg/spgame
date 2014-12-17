@@ -1,6 +1,6 @@
 spgame
 ======
-Repo for documenting client functions in a defunct MORPG Survival Project.
+Repo for documenting client functions in a defunct MORPG "Survival Project".
 
 Introduction
 -----
