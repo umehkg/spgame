@@ -24,7 +24,7 @@ CServerTCPSocket::SendLoop(CClientObject &param1, char* param2, int param3) //+2
 				DecryptBody((char *)(DWORD)param2+4, (CGenericMessage *)param2->GetSize()-4)
 				if (var1)
 				{
-					if ( param1->BufferSendLoop(param1) )
+					if ( this->BufferSendLoop(param1) )
 						return true; //+2E3D
 				}
 				else
