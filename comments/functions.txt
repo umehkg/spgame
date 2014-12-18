@@ -1,2 +1,5 @@
 487170 SLOT ID Registry item?
 4839B0->484DB0 Enter channel? (@GameState 0)
+716A20 Get FrameRate (debug mode)
+6C23B1 cash (card shop)
+408CD0 code xor routine
