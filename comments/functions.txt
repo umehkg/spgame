@@ -1,1 +1,2 @@
 487170 SLOT ID Registry item?
+4839B0->484DB0 Enter channel? (@GameState 0)
