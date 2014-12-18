@@ -25,6 +25,8 @@ raidcallTW group: 27105202<br />
 <a href="http://forum6.hkgolden.com/ProfilePage.aspx?userid=195369">(Show Blocked User - 巫毒兔子)</a><br />
 Documented functions
 -----
+More info: <a href="https://github.com/umehkg/spgame/issues">Repo Issues</a><br />
+<br />
 **iosocketdll.dll**<br />
 +1020 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/IsValid.cpp">CClientObject::IsValid</a><br />
 +1FF0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/ReceiveLoop.cpp">
