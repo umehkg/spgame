@@ -1,5 +1,12 @@
 Comments
 =====
+19 Dec 2014
+-----
+- Code has protection xor
+- Card has protection xor neg
+- Cash has no protection
+- DisplayCode/Total has no protection  (string)
+
 18 Dec 2014
 -----
 - Found a way to enter card shop (alternative way to set GameState = 5 without crashing). Ref:sp.exe+893C4. esi @instruction = ecx @subroutine EP (this pointer). Subroutine sp.exe+89310 is member of *CUnknown* with const base addr = 0x816860 (Ref: sp.exe+5233)
