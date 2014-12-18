@@ -3,3 +3,4 @@
 716A20 Get FrameRate (debug mode)
 6C23B1 cash (card shop)
 408CD0 code xor routine
+47A0A0 function for init userinfo(?)
