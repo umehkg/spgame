@@ -2,7 +2,7 @@ Comments
 =====
 18 Dec 2014
 -----
-- Found a way to enter card shop (alternative way to set GameState = 5 without crashing). Ref:sp.exe+893C4
+- Found a way to enter card shop (alternative way to set GameState = 5 without crashing). Ref:sp.exe+893C4. esi @instruction = ecx @subroutine EP (this pointer). Subroutine sp.exe+89310 is member of *CUnknown* with const base addr = 0x816860 (Ref: sp.exe+5233)
 
 - iosocket.dll+3C60 is confirmed to be MD5::transform. The subroutine calculates the md5 hash of the entire packet payload (with its first dword as packet size) and returns the hash value with eax.
 
