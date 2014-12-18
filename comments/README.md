@@ -2,7 +2,7 @@ Comments
 =====
 19 Dec 2014
 -----
-- Code has protection xor
+- Code has protection xor neg
 - Card has protection xor neg
 - Cash has no protection
 - DisplayCode/Total has no protection  (string)
