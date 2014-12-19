@@ -17,7 +17,7 @@ fork me
 <hr>
 Currently working on:<br />
 <b>
-sp.exe+2FAC00
+sub_4228F0 LoadChannelResource - Start
 </b>
 Contact
 -----
