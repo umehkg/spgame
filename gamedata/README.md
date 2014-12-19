@@ -11,8 +11,10 @@ Black Cards
 - 1321 Fire Magic
 - 1331 Earth Magic
 - 1341 Wind Magic
+
 Silver Cards
 -----
+
 Pet Cards
 -----
 - 5008
