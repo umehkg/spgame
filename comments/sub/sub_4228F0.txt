@@ -1,0 +1,27 @@
+sub_4228F0 LoadChannelResource - Start 
+^ calledBy: sub_422290+92
+  ^ calledBy: sub_405180+98 - Case 1 of GameState
+  
+Comments:
+LoadChannelResource is called after GameState is set to 1.
+=> Find which function(s) set GameState to 1
+With ref to Issue #1, only sub_484DB0+2F writes 1 to GameState.
+=> Find what triggers sub_484DB0
+
+sub_484DB0 Enter Channel
+^ calledBy: sub_4839B0+77 (jmp)
+  ^ calledBy: sub_405180+8C - Case 0 of GameState
+^ calledBy: sub_489310+AF (call)
+  ^ calledBy: sub_405180+B8 - Case 2 of GameState
+^ calledBy: sub_4ADA00 +359 (call), +4FD (call)
+  ^ calledBy: sub_405180+F0 - Case 4 of GameState
+^ calledBy: sub_6F7530+42 (jmp) Disconnect to Server
+  ^ calledBy: .text:0076D6EC dd offset sub_6F7530
+^ calledBy: sub_700430+353 (call) contains CGenericMessage::CheckError()
+  ^ calledBy: sub_70A4D0+25D select case 33 - Type II CClientTCPSocket::GetSocket()
+
+sub_4839B0
+  sub_4832D0  +19
+  sub_70F310  +24
+  ...
+  sub_484DB0  +77
