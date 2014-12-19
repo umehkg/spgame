@@ -13,6 +13,7 @@ This repo contains the products and work-in-process for <u>recovered functions</
 ```
 fork me
 ```
+<a href="http://faydoc.tripod.com/cpu/index.htm">Intel Pentium Instruction Set Reference</a><br />
 <br />
 <hr>
 Currently working on:<br />
