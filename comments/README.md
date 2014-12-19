@@ -1,5 +1,12 @@
 Comments
 =====
+20 Dec 2014
+-----
+- client class MyInfo has a static base pointer.
+- Channel chat code will be posted on issues.
+- Username has 3 protection functions, 2 of them believed to be traffic light construction
+- ^ Username is stored in 2 positions, one in plaintext one in CryptUserInfo (guessed), addresses found, implement failed
+
 19 Dec 2014
 -----
 - Code has protection xor neg
