@@ -8,3 +8,4 @@
 6592A0 level to descriptors
 674b70 channel move wnd
 422290->4228F0 LoadChannelResource
+700430 receivePacket(checkError stage) contains call to EnterChannel(sub_484DB0) Ref: 700783
