@@ -16,17 +16,34 @@ sub_484DB0 Enter Channel
 ^ calledBy: sub_4ADA00 +359 (call), +4FD (call)
   ^ calledBy: sub_405180+F0 - Case 4 of GameState
 ^ calledBy: sub_6F7530+42 (jmp) Disconnect to Server
-  ^ calledBy: .text:0076D6EC dd offset sub_6F7530
+  ^ xRef: .text:0076D6EC dd offset sub_6F7530
 ^ calledBy: sub_700430+353 (call) contains CGenericMessage::CheckError()
-  ^ calledBy: sub_70A4D0+25D select case 33 - Type II CClientTCPSocket::GetSocket()
+  ^ calledBy: sub_70A4D0+25D select case 33 - Type II CClientTCPSocket::GetSocket() - +0 param1: wParam
+    ^ calledBy: sub_70AD90+D checks if lParam == 1
+      ^ calledBy: sub_4037D0+856 Note: int __stdcall sub_4037D0(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
+        ^ xRef: mov [esp+48h+WndClass.lpfnWndProc], offset sub_4037D0
+        ^ xRef: .text:009540AC off_9540AC dd offset sub_4037D0
+
+sub_4037D0
+LRESULT WINAPI DefWindowProc(
+  _In_  HWND hWnd,
+  _In_  UINT Msg,
+  _In_  WPARAM wParam,
+  _In_  LPARAM lParam
+);
 
 sub_4839B0
   sub_4832D0  +19
+    sub_482E90
   sub_70F310  +24
+    SendMessageA( ds:wParam, 0x467, 0, 0 )  +78
   sub_72EAA0  +35
-  sub_483840  +3C
-  sub_482E60  +4D
+  sub_483840  +3C g_bProgramExit : Login - ESC
+  sub_482E60  +4D LoadPGF
   call ??? +5B
-  sub_714130  +5E
-  sub_404BB0  +63
+  sub_714130  +5E DDSetGamma
+  sub_404BB0  +63 Print Debug Info (hDC)
   sub_484DB0  +77 Enter Channel
+
+Summary:
+packetType = 0x
