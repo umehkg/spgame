@@ -46,4 +46,8 @@ sub_4839B0
   sub_484DB0  +77 Enter Channel
 
 Summary:
-packetType = 0x
+packetType = 0x1121 (TCP Recv Packet Type II)
+loc_700507:
+packet+0x24 0x64~0x6C
+  0x6B (case 107)
+packet+0x28+0xA (const char *)"prev ping" (size 0xA)
