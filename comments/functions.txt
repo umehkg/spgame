@@ -6,3 +6,4 @@
 47A0A0 function for init userinfo(?)
 473430 myinformation.cpp (from assert msg)
 6592A0 level to descriptors
+674b70 channel move wnd
