@@ -11,6 +11,7 @@ Type II: 0x1100~0x1140
 .text:0070A54C                 add     eax, 0FFFFEF00h
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
 ```
+sub_700430 <call 70A4D0 case 33(dec)
 
 Type III: 0x4302~0x4490
 ```asm
