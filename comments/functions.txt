@@ -7,3 +7,4 @@
 473430 myinformation.cpp (from assert msg)
 6592A0 level to descriptors
 674b70 channel move wnd
+422290->4228F0 LoadChannelResource
