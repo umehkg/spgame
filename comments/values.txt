@@ -1,1 +1,2 @@
 7EAE8A xmas BGM = 0
+810D20 case0 2nd pointer (Ref: sub_4839B0)
