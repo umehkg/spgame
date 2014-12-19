@@ -23,5 +23,10 @@ sub_484DB0 Enter Channel
 sub_4839B0
   sub_4832D0  +19
   sub_70F310  +24
-  ...
-  sub_484DB0  +77
+  sub_72EAA0  +35
+  sub_483840  +3C
+  sub_482E60  +4D
+  call ??? +5B
+  sub_714130  +5E
+  sub_404BB0  +63
+  sub_484DB0  +77 Enter Channel
