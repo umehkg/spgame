@@ -10,6 +10,7 @@ This repo is created by <a href="https://github.com/umehkg/spgame/blob/master/co
 This repo contains the products and work-in-process for <u>recovered functions</u> in the game client:<br />
 <b>./asm</b>         for raw assembly<br />
 <b>./src</b>         for recovered C++-style functions<br />
+<b>./comments</b>    general comments about functions/data
 ```
 fork me
 ```
