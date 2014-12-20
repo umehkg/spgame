@@ -27,10 +27,13 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
   }
   if (pkt_18 = packet+0x18 >= 0 && < 0x1F)
   {
-    /* omg what is this!? */
+    /* omg what is this!? compiler-optimized divison??
+    0x66666667 ~= 2^33/5 ???
+    */
     edx = 0x66666667 * pkt_18 (high 32bit)
     eax = 0x66666667 * pkt_18 (low 32bit)
-    eax = (edx >s> 2) >> 0x1F // >s> : signed >> shift SAR
+    edx = edx >s> 2 // >s> : signed >> shift SAR
+    eax = edx >> 0x1F 
     [7F3BBC] = eax;
   }
   //TODO: ...
