@@ -46,7 +46,7 @@ sub_4839B0
   sub_484DB0  +77 Enter Channel
 
 Summary:
-packetType = 0x1121 (TCP Recv Packet Type II)
+packetType = 0x1121 (Packet Type II) UDP Recv
 loc_700507:
 packet+0x24 0x64~0x6C
   0x6B (case 107)
