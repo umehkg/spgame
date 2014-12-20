@@ -1,0 +1,12 @@
+sub_4839B0
+this = offset 0x810D20
+if (*(LPDWORD)0x7EFF10 = 0)
+{
+//4832D0 for initClientTCP
+//70F310
+//483840 programExit
+//482E60
+//70FDE0 loadPgf
+//714130 DDSetGamma
+//404BB0 printDebugInfo
+}
