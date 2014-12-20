@@ -3,6 +3,7 @@ Comments
 21 Dec 2014
 -----
 - The search for recv packets handling continues...
+
 20 Dec 2014
 -----
 - client class MyInfo has a static base pointer.
