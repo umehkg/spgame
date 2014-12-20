@@ -12,15 +12,42 @@ Ref: sub_70A4D0<br />
 .text:0070A54C                 add     eax, 0FFFFEF00h
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
 ```
+- case 0:
+- case 1:
+- case 2:
+- case 3:
+- case 4:
+- case 5:
+- case 6:
+- case 7:
+- case 8:
+- case 9:
+- case 16:
+- case 18:
+- case 19:
+- case 20:
+- case 21:
+- case 24:
+- case 25:
 - case 32: sub_6FFEB0 GameState == 4 ? 
 - **case 33**: sub_700430 Login response
 - case 35: sub_6FB590 MyInfo->0x2E01~0x2E08, checks MyInfo->0xCC0 == 0x244 ?
+- case 36: sub_6FF5F0 GameState == 3 || 4 ?
 - case 37: sub_7068C0 "CUDPQuestNPCCollisionMsg Rcv Start"
 - case 38: sub_701D00 GameState == 4 ? "CUDPNpcControlMsg Rcv Start"
 - case 39: sub_701E80 GameState == 4 ?
 - case 40: sub_6FB050 some game message in korean
 - case 41: sub_702090 GameState == 4 ?
 - case 48: sub_702230 GameState == 4 ?
+- case 49: sub_70A1B0 GameState == 4 ?
+- case 50: sub_6FB520 ds:7EF97C ???
+- case 51:
+- case 52:
+- case 53:
+- case 54:
+- case 55:
+- case 56:
+- case 57:
 - case 64: sub_706150 GameState == 4 ?
 
 Type III: 0x4302~0x4490
