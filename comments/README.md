@@ -6,6 +6,7 @@ Comments
 - Channel chat code will be posted on issues.
 - Username has 3 protection functions, 2 of them believed to be traffic light construction
 - ^ Username is stored in 2 positions, one in plaintext one in CryptUserInfo (guessed), addresses found, implement failed
+- packetType is actually socket ID? (unverified)
 
 19 Dec 2014
 -----
