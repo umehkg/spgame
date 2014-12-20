@@ -5,7 +5,7 @@ unsigned long packetType = *(LPDWORD)(packet+0x4);
 Type I: 0x2XXX
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp
 
-Type II: 0x1100~0x1140
+Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.
 ```asm
 .text:0070A547                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
 .text:0070A54C                 add     eax, 0FFFFEF00h
