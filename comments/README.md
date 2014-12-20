@@ -8,6 +8,7 @@ Comments
 - ^ Username is stored in 2 positions, one in plaintext one in CryptUserInfo (guessed), addresses found, implement failed
 - packetType is actually socket ID? (unverified)
 - LoadChannel Resource is *after* Enter Channel
+- Found login OK response packet
 
 19 Dec 2014
 -----
