@@ -4,7 +4,7 @@ unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
 Type I: 0x2XXX
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
-Complete listing of functions (10 of them): <br />
+Complete listing of Type I functions (10 of them): <br />
 - 0x2807 sub_6F9910
 - 0x2908 sub_6F8E80
 - 0x2912 sub_6F90B0 SetActiveCharacter
@@ -23,6 +23,7 @@ Ref: sub_70A4D0<br />
 .text:0070A54C                 add     eax, 0FFFFEF00h
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
 ```
+Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) )
 - case 0:
 - case 1:
 - case 2:
@@ -67,4 +68,5 @@ Type III: 0x4302~0x4490
 .text:006F780D                 add     eax, 0FFFFBCFEh
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
+Incomplete listing of Type III: <br />
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
