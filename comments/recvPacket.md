@@ -12,6 +12,7 @@ Ref: sub_70A4D0<br />
 .text:0070A54C                 add     eax, 0FFFFEF00h
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
 ```
+- case 32: sub_6FFEB0 GameState == 4 ? 
 - **case 33**: sub_700430 Login response
 - case 35: sub_6FB590 MyInfo->0x2E01~0x2E08, checks MyInfo->0xCC0 == 0x244 ?
 - case 37: sub_7068C0 "CUDPQuestNPCCollisionMsg Rcv Start"
