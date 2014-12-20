@@ -1,0 +1,7 @@
+--Header--
+0x0 -> 0x1C //packetSize
+0x4 -> 0x2907 //packetType
+--Body--
+0x10 -> 0xFFFFFFFF //packetState, almost always -1
+0x14 -> 0xFAF //port (guessed)
+0x18 -> 0x00 //IP (guessed)
