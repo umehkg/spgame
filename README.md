@@ -31,6 +31,7 @@ More info: <a href="https://github.com/umehkg/spgame/issues">Repo Issues</a><br 
 <br />
 **iosocketdll.dll**<br />
 +1020 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/IsValid.cpp">CClientObject::IsValid</a><br />
++1740 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientObject/GetSocket.cpp">CClientObject::GetSocket</a><br />
 +1FF0 <a href="https://github.com/umehkg/spgame/blob/master/src/iosocketdll/classes/CClientTCPSocket/ReceiveLoop.cpp">
 CClientTCPSocket::ReceiveLoop
 </a><br />
