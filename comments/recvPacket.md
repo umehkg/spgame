@@ -57,3 +57,4 @@ Type III: 0x4302~0x4490
 .text:006F780D                 add     eax, 0FFFFBCFEh
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
+- case 62: sub_6ED420 GameState == 4 ? confirm, playerName
