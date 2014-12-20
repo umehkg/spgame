@@ -50,4 +50,4 @@ packetType = 0x1121 (Packet Type II) UDP Recv
 loc_700507:
 packet+0x24 0x64~0x6C
   0x6B (case 107)
-packet+0x28+0xA (const char *)"prev ping" (size 0xA)
+packet+0x28 (const char *)"prev ping" (size 0xA)
