@@ -1,0 +1,40 @@
+packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
+> 1
+  MyInfo->0xC7C = (char *)0x810D28 //L:username, R:unknown
+  loc_6F9C53
+  MyInfo->0xD98 = packet+0x18
+  MyInfo->0xCA4 = packet+0x1C
+  MyInfo->0xD9C = packet+0x20
+  MyInfo->0xDA0 = packet+0x24
+  MyInfo->0xCC0 = packet+0xA0 //checked against 0x230 later on
+  push packet+0xA4
+  call sub_473150(packet+0x38, packet+0x3C) //ecx = [7EF97C]
+       ^ MyInfo->0x8 = packet+0x38 (param1)
+         MyInfo->0xC = packet+0x3C (param2)
+  call sub_477760(packet+0x40, packet+0x44) //ecx = [7EF97C]
+  call sub_477810(packet+0x70, packet+0x74) //ecx = [7EF97C]
+  memcpy( (void *)MyInfo->0xC89, (const char *)packet+0x48, strlen((char *)packet+0x48)); char[12] \0 exclusive
+  memcpy( (void *)MyInfo->0xC96, (const char *)packet+0x55, strlen((char *)packet+0x55)); 
+  if (packet+0x2C <= 0) (cmp eax, 0; jle)
+  {
+    MyInfo->0xCAC = packet+0x2C
+    MyInfo->0xCA8 = packet+0x28
+  }
+  else
+  {
+    MyInfo->0xCAC = 0
+    MyInfo->0xCA8 = 0
+  }
+  if (pkt_18 = packet+0x18 >= 0 && < 0x1F)
+  {
+    /* omg what is this!? */
+    edx = 0x66666667 * pkt_18 (high 32bit)
+    eax = 0x66666667 * pkt_18 (low 32bit)
+    eax = (edx >s> 2) >> 0x1F // >s> : signed >> shift SAR
+    [7F3BBC] = eax;
+  }
+  //TODO: ...
+
+Summary:
+packetType =  0x2807
+packet+0x14 < possible values: -6, -5, -4, -3, -2, -1, 0, 1, 2
