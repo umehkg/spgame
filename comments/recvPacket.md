@@ -3,9 +3,18 @@ CClientTCPSocket::GetSocket(void) returns unsigned long packetType
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
 Type I: 0x2XXX
-https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp
+https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
+Complete listing of functions (10 of them): <br />
+- 0x2807 sub_6F9910
+- 0x2908 sub_6F8E80
 - 0x2912 sub_6F90B0 SetActiveCharacter
+- 0x2916 sub_6F9FC0
+- 0x2918 sub_6F8B50
 - 0x2919 sub_6F8AF0 
+- 0x2922 sub_6F8BD0
+- 0x2923 sub_6FAAF0
+- 0x2924 sub_6FA9F0
+- 0x2925 sub_6FAAD0
 
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
