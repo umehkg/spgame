@@ -4,6 +4,7 @@ unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
 Type I: 0x2XXX
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp
+- 0x2912 sub_6F90B0
 
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
