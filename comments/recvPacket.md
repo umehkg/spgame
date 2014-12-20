@@ -2,7 +2,7 @@ CClientTCPSocket::GetSocket(void) returns unsigned long packetType
 ```C++
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
-Type I: 0x2XXX **TCP Packet**
+Type I: 0x2807 / 0x29XX **TCP Packet**
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 - 0x2807 sub_6F9910
