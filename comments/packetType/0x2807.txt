@@ -4,7 +4,7 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
   loc_6F9C53
   MyInfo->0xD98 = packet+0x18
   MyInfo->0xCA4 = packet+0x1C
-  MyInfo->0xD9C = packet+0x20
+  MyInfo->0xD9C = packet+0x20 //player level (0~32)
   MyInfo->0xDA0 = packet+0x24
   MyInfo->0xCC0 = packet+0xA0 //checked against 0x230 later on
   push packet+0xA4
