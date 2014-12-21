@@ -1,4 +1,6 @@
+Description: Mainly handle login credentials. Important TCP. Type I
 packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
+> OTHER VALUES: nothing happen. password field cleared as default action
 > -6 gibberish text notice Ref: http://i.imgur.com/PiZJx7p.png =>gameTerminated => openURL by IE( as.gameangel.com )
 > -5 korean announcement Ref: http://i.imgur.com/18lMTmj.png
 > -4 ID already logged in. (ref: http://imgur.com/wtss8rd ) DOES NOT terminate game
