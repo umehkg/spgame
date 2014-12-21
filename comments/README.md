@@ -7,6 +7,7 @@ Comments
 - Type III should be 99% UDP. further tests needed. case 0 is important
 - Handling login credentials (and responses) are by TCP(type I)
 - 0x2807(Type I) **overrides** Type II Login
+- partial success in creating login response with basic playerInfo. relies on -1 subcase
 
 21 Dec 2014
 -----
