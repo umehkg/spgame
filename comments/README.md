@@ -3,6 +3,7 @@ Comments
 22 Dec 2014
 ----
 - Change character packet is OK
+- username protection is protecting first char with CryptInfo (dataSize = 1) !! (partial verified)
 
 21 Dec 2014
 -----
