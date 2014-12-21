@@ -70,4 +70,5 @@ Type III: 0x4302~0x4490
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
 Incomplete listing of Type III: <br /> UDP?
+- 0x4302: sub_6DDE30
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
