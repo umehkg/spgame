@@ -1,5 +1,9 @@
 Comments
 =====
+22 Dec 2014
+----
+- Change character packet is OK
+
 21 Dec 2014
 -----
 - The search for recv packets handling continues...
