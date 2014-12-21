@@ -5,6 +5,7 @@ Comments
 - Change character packet is OK
 - username protection is protecting first char with CryptInfo (dataSize = 1) !! (partial verified)
 - Type III should be 99% UDP. further tests needed. case 0 is important
+- Handling login credentials (and responses) are by TCP(type I)
 
 21 Dec 2014
 -----
