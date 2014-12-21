@@ -7,7 +7,8 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
   MyInfo->0xD9C = packet+0x20 //player level (0~32)
   MyInfo->0xDA0 = packet+0x24
   MyInfo->0xCC0 = packet+0xA0 //checked against 0x230 later on
-  push packet+0xA4
+  call sub_4931B0(packet+0xA4)
+  ^ MyInfo->0x320C (crypt)
   call sub_473150(packet+0x38, packet+0x3C) //ecx = [7EF97C]
        ^ MyInfo->0x8 = packet+0x38 (param1)
          MyInfo->0xC = packet+0x3C (param2)
@@ -15,12 +16,12 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
   call sub_477810(packet+0x70, packet+0x74) //ecx = [7EF97C]
   memcpy( (void *)MyInfo->0xC89, (const char *)packet+0x48, strlen((char *)packet+0x48)); char[12] \0 exclusive
   memcpy( (void *)MyInfo->0xC96, (const char *)packet+0x55, strlen((char *)packet+0x55)); 
-  if (packet+0x2C <= 0) (cmp eax, 0; jle)
+  if (packet+0x2C > 0) (cmp eax, 0; jle) //non-jumped
   {
     MyInfo->0xCAC = packet+0x2C
     MyInfo->0xCA8 = packet+0x28
   }
-  else
+  else //jumped
   {
     MyInfo->0xCAC = 0
     MyInfo->0xCA8 = 0
@@ -38,6 +39,30 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
   }
   //TODO: ...
 
-Summary:
+Summary: //sub_6F9910
 packetType =  0x2807
 packet+0x14 < possible values: -6, -5, -4, -3, -2, -1, 0, 1, 2
+packet+0x18 < unknown (default -1) possible value: 0x00~0x1E(0~32)
+packet+0x1C < player active character (multiples of 10)
+packet+0x20 < player level (0~32)
+packet+0x24 < usable character count (1~12)
+packet+0x28 < ?? (default = 0) possible values: != 1 :ok 1:muted chat-related?yes
+packet+0x2C < ^if 1, days to mute player, should be 0 if ^ = 0
+packet+0x30 < possible values: 1, 7, -1
+packet+0x34 < ?? not used (dword)
+packet+0x38 < gained player exp (higher 4 bytes) //8bytes total
+packet+0x3C < gained player exp (lower 4 bytes)
+packet+0x40 < CryptInfo player AVATAR coins (bronze coins)//MyInfo->0xE4 (higher 4 bytes) //8bytes total
+packet+0x44 < player AVATAR coins (lower 4 bytes)
+packet+0x48 < char[12] guildName
+packet+0x55 < char[12] guildTitle(job)
+packet+0x62 < ?? not used char[16]
+packet+0x78 < char[12] ?? goes to offset ds:810D42 unknown
+packet+0x85 < ?? not used char[12]
+packet+0x91 < ?? goes to ds:810D5B (dword) //char[10] unknown
+packet+0x95 < ?? goes to ds:810D5F (dword)
+packet+0x99 < ?? goes to ds:810D63 (word)
+packet+0x9C < ?? dword unknown
+packet+0xA0 < unknown (default unencrypted -1)
+packet+0xA4 < unknown (default -1)
+packetSize = 0xA8
