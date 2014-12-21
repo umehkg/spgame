@@ -14,4 +14,5 @@ packetSize = 0x22
 packetType = 0x2912
 packet+0x14 must be 1 (only valid value)
 packet+0x18 sets active character (multiples of 10)
-^ possible values: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 250, 260, 270, 280
+^ possible values (dec): 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 250, 260, 270, 280
+10~120 Xyrho ~ Will, 250~280 Avatar 13 (Water~Wind)
