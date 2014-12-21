@@ -48,7 +48,7 @@ packet+0x20 < player level (0~32)
 packet+0x24 < usable character count (1~12)
 packet+0x28 < ?? (default = 0) possible values: != 1 :ok 1:muted chat-related?yes
 packet+0x2C < ^if 1, days to mute player, should be 0 if ^ = 0
-packet+0x30 < possible values: 1, 7, -1
+packet+0x30 < possible values: 1, 7, -1 (1=valid, 7=???, -1 under-14 parent consent)
 packet+0x34 < ?? not used (dword)
 packet+0x38 < gained player exp (higher 4 bytes) //8bytes total
 packet+0x3C < gained player exp (lower 4 bytes)
