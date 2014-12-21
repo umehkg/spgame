@@ -12,14 +12,38 @@ packet+0x25 < char[12] guildTitle/Job
 packet+0x32 < byte playerGender 0=girl 1=male
 packet+0x33
 packet+0x34 < //+dac
-packet+0x38
+packet+0x38 < //+db4
 packet+0x3C < //+db0
-packet+0x40
+packet+0x40 < //+db8
 packet+0x44 < //+da4
 packet+0x48 < //+da8
-packet+0x78 < //+d9c
+packet+0x4C
+packet+0x50 < //+10d8 //+10e4
+packet+0x54 < //+10dc
+packet+0x58
+packet+0x5C < //+10ec //+10e8 //+10f0 //+10f4
+packet+0x60 < playerExp/Point //+8 //+dc0 (higher 4 bytes)
+packet+0x64 < //+c //+dc4 (lower 4 bytes)
+packet+0x68 < playerMoney/Code //+10 (higher 4 bytes)
+packet+0x6C < (lower 4 bytes)
+packet+0x70 < player avatar/bronze coin//+e4 //+31a0 (higher 4 bytes)
+packet+0x74 < //+31a4 (lower 4 bytes)
+packet+0x78 < player level //+d9c
 packet+0x7C < //+da0
+packet+0x80 < possible values 0x00~0x0F inclusive otherwise 0 //+1100
+packet+0x84 < possible values 0x00~0x0F inclusive otherwise 0 //+1104
+packet+0x88 < possible values 0x00~0x0F inclusive otherwise 0 //+1108
+packet+0x8C < CryptInfo waterCard//+110c 
+packet+0x90 < CryptInfo fireCard //+11e0
+packet+0x94 < CryptInfo earthCard//+12b4
+packet+0x98 < CryptInfo windCard //+1388
 packet+0x9C < //+d98
-packet+0x970 < 
+...
+packet+0x928 < switch 0~4 inclusive
+packet+0x93C~0x943 < BYTE //+2e01~+2e08 //+2e05/+2e07 set 0(?V) by if(+cc0 == 0x244)
+packet+0x94C < //+31fc
+packet+0x950~0x968 < DWORD //+2d48~+2d60
+packet+0x970 < //+cc0 compared with 0x244(580dec) 
+packet+0x974 < CryptInfo //+cc4
 
-packetSize = 0x
+packetSize = 0x978 (minimum estimate)
