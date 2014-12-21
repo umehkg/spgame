@@ -1,7 +1,12 @@
 //Ref: sub_6DDE30
 //Type III case 0
-packet+0x14
-^ 1
+packet+0x14 -4, -3, -2 -1, 0, 1
+> -4
+> -3
+> -2
+> -1
+> 0
+> 1 (VALID)
   
 
 Summary:
