@@ -1,4 +1,12 @@
 packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
+> -6 gibberish text notice Ref: http://i.imgur.com/PiZJx7p.png =>gameTerminated => openURL by IE( as.gameangel.com )
+> -5 korean announcement Ref: http://i.imgur.com/18lMTmj.png
+> -4 ID already logged in. (ref: http://imgur.com/wtss8rd ) DOES NOT terminate game
+> -3 Version does not fit server's. please upgrade in normal way => gameTerminated
+> -2 ID is wrong. try again (ID non-existent?)
+> -1 an error has occured. please inquire support team
+> 2 korean announcement Ref: http://imgur.com/tyMS6VN
+> 0 Incorrect password
 > 1
   MyInfo->0xC7C = (char *)0x810D28 //L:username, R:unknown
   loc_6F9C53
