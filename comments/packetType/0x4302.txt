@@ -1,0 +1,25 @@
+//Ref: sub_6DDE30
+//Type III case 0
+packet+0x14
+^ 1
+  
+
+Summary:
+packetType = 0x4302
+packet+0x14 < possible values -4~1 inclusive
+packet+0x18 < char[12] guildName 
+packet+0x25 < char[12] guildTitle/Job
+packet+0x32 < byte playerGender 0=girl 1=male
+packet+0x33
+packet+0x34 < //+dac
+packet+0x38
+packet+0x3C < //+db0
+packet+0x40
+packet+0x44 < //+da4
+packet+0x48 < //+da8
+packet+0x78 < //+d9c
+packet+0x7C < //+da0
+packet+0x9C < //+d98
+packet+0x970 < 
+
+packetSize = 0x
