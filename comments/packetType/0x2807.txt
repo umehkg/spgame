@@ -41,7 +41,7 @@ packet+0x14 > += 6 switch 0x00~0x08 IDA order 2, 0, -6, -3, -4, -1, 1, -2, -5
 
 Summary: //sub_6F9910
 packetType =  0x2807
-packet+0x14 < possible values: -6, -5, -4, -3, -2, -1, 0, 1, 2
+packet+0x14 < possible values: -6, -5, -4, -3, -2, -1, 0, 1, 2 //0=password error?
 packet+0x18 < unknown (default -1) possible value: 0x00~0x1E(0~32)
 packet+0x1C < player active character (multiples of 10)
 packet+0x20 < player level (0~32)
