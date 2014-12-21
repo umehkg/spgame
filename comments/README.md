@@ -8,6 +8,7 @@ Comments
 - Handling login credentials (and responses) are by TCP(type I)
 - 0x2807(Type I) **overrides** Type II Login
 - partial success in creating login response with basic playerInfo. relies on -1 subcase
+- define xor neg algoithm is CryptInfo
 
 21 Dec 2014
 -----
