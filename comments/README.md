@@ -1,7 +1,11 @@
 Comments
 =====
+23 Dec 2014
+-----
+- Finally found base pointer for channel info. Packet type is found (I guess). Test needed.
+
 22 Dec 2014
-----
+-----
 - Change character packet is OK
 - username protection by CryptInfo for every char in username (99% sure)
 - Type III should be 99% UDP. further tests needed. case 0 is important
