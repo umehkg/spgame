@@ -1,0 +1,7 @@
+Summary:
+packetType = 0x2918
+packet+0x14 < [7F335C]
+packet+0x18 < [7F3360]
+packet+0x1C < [7F3364]
+packet+0x20 < [7F3368]
+packetSize = 0x24
