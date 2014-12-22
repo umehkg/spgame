@@ -1,0 +1,3 @@
+packetType = 0x2919
+packet+0x14 < possible val: -1 (cmp)
+packetSize = 0x18
