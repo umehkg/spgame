@@ -13,7 +13,7 @@ byte_7F3BC4 := 1 //load / flush channel info status
 
 Summary:
 packetType = 0x2908
-packet+0x14 < word=>dword (movzx) 0~3 dec,values ASSERTed //var1
+packet+0x14 < word=>dword (movzx) 0~3 dec,values ASSERTed //var1 0=null? 1=beginner 2=hero 3=epic
 packet+0x16 < word=>dword (movzx) 0~39 dec,values ASSERTed //var2
 packet+0x18 < char [15] ?
 packet+0x28 <
