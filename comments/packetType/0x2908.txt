@@ -9,7 +9,7 @@ byte_7F32BC < packet+0x60
 
 dword_7F0C9C+ (var1*40+var2)*16 := (char *)packet+0x18 (memcpy)
 
-byte_7F3BC4 := 1
+byte_7F3BC4 := 1 //load / flush channel info status
 
 Summary:
 packetType = 0x2908
