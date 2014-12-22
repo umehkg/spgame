@@ -3,7 +3,7 @@ Comments
 22 Dec 2014
 ----
 - Change character packet is OK
-- username protection is protecting first char with CryptInfo (dataSize = 1) !! (partial verified)
+- username protection by CryptInfo for every char in username (99% sure)
 - Type III should be 99% UDP. further tests needed. case 0 is important
 - Handling login credentials (and responses) are by TCP(type I)
 - 0x2807(Type I) **overrides** Type II Login
