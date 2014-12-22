@@ -9,6 +9,7 @@ Comments
 - 0x2807(Type I) **overrides** Type II Login
 - partial success in creating login response with basic playerInfo. relies on -1 subcase
 - define xor neg algoithm as CryptInfo
+- username protection has 3rd protection. first char(unencrypted) is stored in "Default"(0x76D83F)
 
 21 Dec 2014
 -----
