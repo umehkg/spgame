@@ -1,0 +1,3 @@
+packetType = 0x2924
+packet+0x14 possible values: 2, 3
+packetSize = 0x18
