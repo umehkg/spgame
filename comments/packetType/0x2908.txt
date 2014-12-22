@@ -2,7 +2,7 @@
 byte_7F0BFC [var1*40+var2] := 1 <=> 0~159 (160 total)
 dword_7F169C < packet+0x28
 
-dword_7F2B3C < packet+0x14
+dword_7F2B3C < var1*40
 dword_7F2DBC < packet+0x2C
 dword_7F303C < packet+0x5C
 byte_7F32BC < packet+0x60
