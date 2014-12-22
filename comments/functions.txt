@@ -12,3 +12,4 @@
 43A400 "Load GlobalResource - Start"
 424110 "Load GameResource - Start"
 459870 "Load RoomResource - Start"
+6DC770 room info
