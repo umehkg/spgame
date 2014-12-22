@@ -7,10 +7,10 @@ Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 - **0x2807** sub_6F9910 Login Response
-- 0x2908 sub_6F8E80
+- 0x2908 sub_6F8E80 ??
 - 0x2912 sub_6F90B0 SetActiveCharacter
-- 0x2916 sub_6F9FC0
-- 0x2918 sub_6F8B50
+- 0x2916 sub_6F9FC0 related with 2 cards. fusion, skillup?
+- 0x2918 sub_6F8B50 easy, sets dword_7F335C 4 dwords
 - 0x2919 sub_6F8AF0 
 - 0x2922 sub_6F8BD0
 - 0x2923 sub_6FAAF0
