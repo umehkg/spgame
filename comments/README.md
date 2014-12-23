@@ -1,5 +1,9 @@
 Comments
 =====
+24 Dec 2014
+- Channel Info packet confirmed
+- Fixed issues for cannot select channelType (MyInfo->
+
 23 Dec 2014
 -----
 - Finally found base pointer for channel info. Packet type is found (I guess). Test needed.
