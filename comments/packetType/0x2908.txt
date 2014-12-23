@@ -24,5 +24,5 @@ packet+0x5A ?? not used
 packet+0x5C < channel max population allowed (default minimum=200)
 packet+0x60 < BYTE ?guild related??
 packet+0x61 ?? not used
-packet+0x64 < cmp sub_469850 possible value = -1
+packet+0x64 < cmp sub_469850 possible values = -1, 0
 packetSize = 0x68
