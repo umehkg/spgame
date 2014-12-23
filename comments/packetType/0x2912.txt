@@ -1,5 +1,5 @@
 Ref: sub_6F90B0
-packet+0x14 -> must be >= 1
+packet+0x14 -> must be >= 1 (1, 2?, other)
 
 if 0x1:
 if [7F3BB0] != 0
