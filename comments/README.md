@@ -2,7 +2,7 @@ Comments
 =====
 24 Dec 2014
 - Channel Info packet confirmed
-- Fixed issues for cannot select channelType (MyInfo->
+- Fixed issues for cannot select channelType (MyInfo->0xD98)
 
 23 Dec 2014
 -----
