@@ -7,16 +7,16 @@ Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 $: complete, +: working, -: unsolved
-- 0x2807 sub_6F9910 + Login Response
-- 0x2908 sub_6F8E80 + Channel Info (one pkt per channel)
-- 0x2912 sub_6F90B0 $ SetActiveCharacter
+- 0x2807 sub_6F9910 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2807.txt">+</a> Login Response
+- 0x2908 sub_6F8E80 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2908.txt">+</a> Channel Info (one pkt per channel)
+- 0x2912 sub_6F90B0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2912.txt">$</a> SetActiveCharacter
 - 0x2916 sub_6F9FC0 - related with 2 cards. fusion, skillup?
 - 0x2918 sub_6F8B50 - easy, sets dword_7F335C 4 dwords
 - 0x2919 sub_6F8AF0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2919.txt">+</a> size 0x18
 - 0x2922 sub_6F8BD0 - size 0x2C "Guild Mark Lock..
 - 0x2923 sub_6FAAF0 - > call sub_6FA650 card/white card related
-- 0x2924 sub_6FA9F0 + size 0x18 TCPSendLoop(size 0x1C)
-- 0x2925 sub_6FAAD0 $ Disconnect Client (bring to login screen). Displays korean msg. size 0x14 (no body) > jmp sub_4035D0  [CryptInfo [7EF9A4].decryptedValue := 1]
+- 0x2924 sub_6FA9F0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2924.txt">+</a> size 0x18 TCPSendLoop(size 0x1C)
+- 0x2925 sub_6FAAD0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2925.txt">$</a> Disconnect Client (bring to login screen). Displays korean msg. size 0x14 (no body) > jmp sub_4035D0  [CryptInfo [7EF9A4].decryptedValue := 1]
 
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
