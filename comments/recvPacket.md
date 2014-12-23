@@ -25,43 +25,43 @@ Ref: sub_70A4D0<br />
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
 ```
 Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confirmed UDP
-- case 0:
-- case 1:
-- case 2:
-- case 3:
-- case 4:
-- case 5:
-- case 6:
-- case 7:
-- case 8:
-- case 9:
-- case 16:
-- case 18:
-- case 19:
-- case 20:
-- case 21:
-- case 24:
-- case 25:
-- case 32: sub_6FFEB0 GameState == 4 ? 
-- **case 33**: sub_700430 Login response
-- case 35: sub_6FB590 MyInfo->0x2E01~0x2E08, checks MyInfo->0xCC0 == 0x244 ?
-- case 36: sub_6FF5F0 GameState == 3 || 4 ?
+- 0x1100 case 0: sub_6FAE00
+- 0x1101 case 1: sub_6FAFB0
+- 0x1102 case 2: sub_702F60
+- 0x1103 case 3: sub_6FC660
+- 0x1104 case 4: sub_6FC820
+- 0x1105 case 5: sub_6FCA70
+- 0x1106 case 6: sub_6FCD00
+- 0x1107 case 7: sub_6FD220
+- 0x1108 case 8: sub_6FD5C0
+- 0x1109 case 9: sub_7089B0
+- 0x1110 case 16: sub_705A00
+- 0x1112 case 18: sub_6FECB0
+- 0x1113 case 19:
+- 0x1114 case 20:
+- 0x1115 case 21:
+- 0x1118 case 24:
+- 0x1119 case 25:
+- 0x1120 case 32: sub_6FFEB0 GameState == 4 ? 
+- 0x1121 **case 33**: sub_700430 Login response
+- 0x1123 case 35: sub_6FB590 MyInfo->0x2E01~0x2E08, checks MyInfo->0xCC0 == 0x244 ?
+- 0x1124 case 36: sub_6FF5F0 GameState == 3 || 4 ?
 - case 37: sub_7068C0 "CUDPQuestNPCCollisionMsg Rcv Start"
 - case 38: sub_701D00 GameState == 4 ? "CUDPNpcControlMsg Rcv Start"
 - case 39: sub_701E80 GameState == 4 ?
 - case 40: sub_6FB050 some game message in korean
 - case 41: sub_702090 GameState == 4 ?
-- case 48: sub_702230 GameState == 4 ?
-- case 49: sub_70A1B0 GameState == 4 ?
-- case 50: sub_6FB520 ds:7EF97C ???
-- case 51:
-- case 52:
-- case 53:
-- case 54:
-- case 55:
-- case 56:
-- case 57:
-- case 64: sub_706150 GameState == 4 ?
+- 0x1130 case 48: sub_702230 GameState == 4 ?
+- 0x1131 case 49: sub_70A1B0 GameState == 4 ?
+- 0x1132 case 50: sub_6FB520 ds:7EF97C ???
+- 0x1133 case 51:
+- 0x1134 case 52:
+- 0x1135 case 53:
+- 0x1136 case 54:
+- 0x1137 case 55:
+- 0x1138 case 56:
+- 0x1139 case 57:
+- 0x1140 case 64: sub_706150 GameState == 4 ?
 
 Type III: 0x4302~0x4490
 ```asm
