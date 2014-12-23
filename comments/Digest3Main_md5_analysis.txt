@@ -1,0 +1,41 @@
+//+45B0
+DigestMsg3Main(char *dstBuffer, char *srcBuffer)
+{
+//srcBuffer: the initialized md5 vector with packet appended right after
+//dstBuffer:
+//+45B1: esi<=srcBuffer
+//+45B5: eax<=value of first dword after 0123...EFFE..3210
+//(eax >> 3) & 0x3F ;eax becomes packetSize
+//+45BF: edi<=address of end of srcBuffer+1
+//+45CA: *(edi) = 0x80;
+//+45CD: edi<= address of end of srcBuffer+2
+//+45D0: ecx is (0x3F - packetSize & 0x3F), compare ecx, 8
+//+45D3: if(ecx >= 8) jmp +45FB
+//
+
+//> +45FB: ecx -= 8;
+//+4600: ecx >> 2;
+//+4603: rep stos dword [edi] (eax = 0) //edi is address of end of srcBuffer+2
+//+4607: ecx &= 0x3;
+//+460A: rep stos byte [edi] (eax = 0) //mov remaining dword-unaligned bytes
+
+//+460C: eax<= value of first dword after 0123...EFFE..3210
+//+460F: ecx<= value of second dword after "
+//+4612: edx <= addressOf packet start after md5vector
+
+//+4617: esi+0x50 = edi? (when packetSize = 20) <= first dword (eax)
+//+461A: esi+0x54 <= 2nd dword (ecx)
+//+461D: call DigestMsg3(srcBuffer, srcBufferPacket) ref +3C60
+
+//C +3C63: eax<=param1 (srcBuffer)
+//C +3C67: ecx<=first dword of srcBuffer. 01 23 45 67 <=> 0x67452301
+//C +3C6A: ebx<=4th dword of srcBuffer. 76 54 32 10
+//C +3C71: esi<=3rd FE DC BA 98
+//C +3C77: edi<=2nd 89 AB CD EF
+//C +3C74: ebp<= esi^ebx 88 88 88 88
+//C +3C7A: eax<= param2 (srcBufferPacket)
+//...
+//C +44D1: retn eax is md5 
+
+//store in dstBuffer;
+}
