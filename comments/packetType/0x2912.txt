@@ -10,7 +10,7 @@ MyInfo->0xCA4 = packet+0x18 //SetActiveCharacter
 >0x5A: -= 0x64 (100), switch case 0, 10, 20, 150, 160, 170, 180
 
 Summary:
-packetSize = 0x22
+packetSize = 0x1C
 packetType = 0x2912
 packet+0x14 must be 1 (only valid value)
 packet+0x18 sets active character (multiples of 10)
