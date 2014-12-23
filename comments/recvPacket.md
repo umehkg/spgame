@@ -15,7 +15,7 @@ Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 - 0x2922 sub_6F8BD0 - size 0x2C "Guild Mark Lock..
 - 0x2923 sub_6FAAF0 - > call sub_6FA650 card/white card related
 - 0x2924 sub_6FA9F0 $ size 0x18
-- 0x2925 sub_6FAAD0 - > jmp sub_4035D0
+- 0x2925 sub_6FAAD0 - size 0x14 (no body) > jmp sub_4035D0 
 
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
