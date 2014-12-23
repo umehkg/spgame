@@ -12,7 +12,7 @@ Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 - 0x2916 sub_6F9FC0 - related with 2 cards. fusion, skillup?
 - 0x2918 sub_6F8B50 - easy, sets dword_7F335C 4 dwords
 - 0x2919 sub_6F8AF0 $ size 0x18
-- 0x2922 sub_6F8BD0 - size 0x2C
+- 0x2922 sub_6F8BD0 - size 0x2C "Guild Mark Lock..
 - 0x2923 sub_6FAAF0 - > call sub_6FA650
 - 0x2924 sub_6FA9F0 $ size 0x18
 - 0x2925 sub_6FAAD0 - > jmp sub_4035D0
