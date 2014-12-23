@@ -15,11 +15,12 @@ This repo contains the products and work-in-process for <u>recovered functions</
 fork me
 ```
 <a href="http://faydoc.tripod.com/cpu/index.htm">Intel Pentium Instruction Set Reference</a><br />
+<a href="http://x86.renejeschke.de/">x86 Instruction Reference</a><br />
 <br />
 <hr>
 Currently working on:<br />
 <b>
-sub_4228F0 LoadChannelResource - Start
+CreateRoom
 </b>
 Contact
 -----
