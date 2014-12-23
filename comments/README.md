@@ -1,12 +1,15 @@
 Comments
 =====
 24 Dec 2014
+-----
 - Channel Info packet confirmed
 - Fixed issues for cannot select channelType (MyInfo->0xD98)
+- Connect to channel issues: 1) where is it connecting? 2) what is the server response expected?
 
 23 Dec 2014
 -----
 - Finally found base pointer for channel info. Packet type is found (I guess). Test needed.
+- Base pointer for room info is found! (mapType, mode etc)
 
 22 Dec 2014
 -----
