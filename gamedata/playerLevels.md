@@ -1,7 +1,7 @@
-Level|	Description|	Point
-------|----------|--------
+Level|	Description|	Minimum Total Point
+------|----------|-----------
 0 | Stone | 0
-1 | Jade 1
+1 | Jade 1 | ?
 2 | Jade 2
 3 | Jade 3
 4 | Jade 4
