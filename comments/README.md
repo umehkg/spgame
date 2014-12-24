@@ -1,5 +1,10 @@
 Comments
 =====
+25 Dec 2014
+-----
+- Local workaround of UDP is possible.
+- Enter channel packet confirmed to be type 0x1101
+
 24 Dec 2014
 -----
 - Channel Info packet confirmed
