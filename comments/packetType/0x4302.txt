@@ -11,7 +11,7 @@ packet+0x14 -4, -3, -2 -1, 0, 1
 
 Summary:
 packetType = 0x4302
-packet+0x14 < possible values -4~1 inclusive
+packet+0x14 < possible values -4~1 inclusive 1:valid
 packet+0x18 < char[12] guildName 
 packet+0x25 < char[12] guildTitle/Job
 packet+0x32 < byte playerGender 0=girl 1=male
