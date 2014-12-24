@@ -27,7 +27,7 @@ Ref: sub_70A4D0<br />
 ```
 Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confirmed UDP
 - 0x1100 case 0: sub_6FAE00
-- 0x1101 case 1: sub_6FAFB0
+- 0x1101 case 1: sub_6FAFB0 (no body) Enter Channel Response?
 - 0x1102 case 2: sub_702F60
 - 0x1103 case 3: sub_6FC660
 - 0x1104 case 4: sub_6FC820
