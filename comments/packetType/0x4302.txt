@@ -49,7 +49,7 @@ packet+0x280 <
 packet+0x400 <
 packet+0x580 <
 packet+0x700 <
-packet+0x880 < //+1568
+packet+0x880 < //+1568 player inventory slot count
 packet+0x884 < //higher 4 bytes : +1460~+1548 lower 4 bytes: from p+0x938
 ...
 packet+0x8F8~+0x914 < //DWORD +1548~+1564
