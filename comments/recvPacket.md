@@ -16,7 +16,7 @@ $: complete, +: working, -: unsolved
 - 0x2922 sub_6F8BD0 - size 0x2C "Guild Mark Lock..
 - 0x2923 sub_6FAAF0 - > call sub_6FA650 card/white card related
 - 0x2924 sub_6FA9F0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2924.txt">+</a> size 0x18 TCPSendLoop(size 0x1C)
-- 0x2925 sub_6FAAD0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2925.txt">$</a> Kick Client? (bring to login screen). Displays korean msg. (size 0x14, no body) > jmp sub_4035D0
+- 0x2925 sub_6FAAD0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2925.txt">$</a> Kick Client? (bring to login screen). Displays korean msg. (size 0x14) > jmp sub_4035D0
 
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
@@ -73,6 +73,7 @@ Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confir
 - 0x1140 case 64: sub_706150 GameState == 4 ?
 
 Type III: 0x4302~0x4490
+Note: The caller of this function is unknown!
 ```asm
 .text:006F7808                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
 .text:006F780D                 add     eax, 0FFFFBCFEh
