@@ -38,7 +38,7 @@ char __thiscall CClientTCPSocket::EvaluateSocket(void *this, int a2, int a3)
       }
       break;
     case 1u:
-      (*(void (__cdecl **)(int))(*(_DWORD *)this + 8))(a3);
+      (*(void (__cdecl **)(int))(*(_DWORD *)this + 8))(a3); //iosocket.CClientTCPSocket::ReceiveProcess
       goto LABEL_11;
     default:
 LABEL_11:
