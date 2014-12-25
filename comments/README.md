@@ -1,5 +1,9 @@
 Comments
 =====
+26 Dec 2014
+-----
+- No success in Type III so far. Finding the reason...
+
 25 Dec 2014
 -----
 - Local workaround of UDP is possible.
