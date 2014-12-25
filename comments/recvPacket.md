@@ -72,5 +72,7 @@ Type III: 0x4302~0x4490
 ```
 Incomplete listing of Type III: <br /> UDP?
 - 0x4302: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a>
+- 0x4303: sub_6D8B50
+- 0x4304: sub_6DC770
 - case 6: sub_6DEAA0 "CreateRoom - End"
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
