@@ -11,7 +11,7 @@ char __thiscall CClientTCPSocket::EvaluateSocket(void *this, int a2, int a3)
     case 0x10u:
       if ( unk_15B4662(*((_DWORD *)this + 1), *((_DWORD *)this + 2), *((_DWORD *)this + 3)) != -1 )
         goto LABEL_11;
-      v11815A0(dword_15B5000, 0, 22762140);
+      v11815A0(dword_15B5000, 0, 22762140); //logdll.CLog::PrintTimeAndLog
       result = 0;
       break;
     case 0x20u:
