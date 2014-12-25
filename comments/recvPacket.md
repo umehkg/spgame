@@ -16,7 +16,8 @@ ___:015B232C                 call    dword ptr [eax+14h]
 
 ecx: 0x007F3C38
 eax: 0x0076D6C0
-[eax+14h]: 0x006FAC00
+[eax+14h]: 0x006FAC00 (Type I)
+N.B. [eax+30h]: 0x006F77D0 (Type III)
 edi: TCP packet payload received by client
 ```
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
