@@ -21,6 +21,14 @@ $: complete, +: working, -: unsolved
 Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
 ```asm
+.text:0070A527                 call    ?ReceiveLoop@CUDPSocket@@QAE_NIAAVCGenericRcvMsg@@@Z ; CUDPSocket::ReceiveLoop(uint,CGenericRcvMsg &)
+.text:0070A52C                 test    al, al
+.text:0070A52E                 jz      loc_70A8E3
+.text:0070A534                 mov     [ebp+var_4031], 1
+.text:0070A53B                 xor     ebx, ebx
+.text:0070A53D                 mov     [ebp+var_4], ebx
+.text:0070A540                 lea     ecx, [ebp+var_4030]
+.text:0070A546                 nop
 .text:0070A547                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
 .text:0070A54C                 add     eax, 0FFFFEF00h
 .text:0070A551                 cmp     eax, 40h        ; switch 65 cases
@@ -76,3 +84,4 @@ Incomplete listing of Type III: <br /> UDP?
 - 0x4304: sub_6DC770 LobbyInfo (rooms)
 - case 6: sub_6DEAA0 "CreateRoom - End"
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
+- 
