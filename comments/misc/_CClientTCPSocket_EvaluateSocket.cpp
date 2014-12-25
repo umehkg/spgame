@@ -9,7 +9,7 @@ char __thiscall CClientTCPSocket::EvaluateSocket(void *this, int a2, int a3)
   switch ( (unsigned __int16)a3 )
   {
     case 0x10u:
-      if ( ws2_32.WSAAsyncSelect(*((_DWORD *)this + 1), *((_DWORD *)this + 2), *((_DWORD *)this + 3), 0x23) != -1 ) //call +4662
+      if ( ws2_32.WSAAsyncSelect(*((_DWORD *)this + 1), *((_DWORD *)this + 2), *((_DWORD *)this + 3), FD_READ|FD_WRITE|FD_CLOSE) != -1 ) //call +4662
         goto LABEL_11;
       v11815A0(dword_15B5000, 0, 22762140); //logdll.CLog::PrintTimeAndLog
       result = 0;
