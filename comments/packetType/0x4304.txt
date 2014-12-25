@@ -3,6 +3,7 @@ packetType = 0x4304
 packet+0x14 < possible values 0, non-zero (1)
 packet+0x18 < room number
 packet+0x1C < room name [28]
+packet+0x39 < ?? not used
 packet+0x3C < room type
 packet+0x40 < room map
 packet+0x44 < players in room?
