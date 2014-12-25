@@ -14,11 +14,12 @@ ___:015B2329                 push    edi
 ___:015B232A                 mov     ecx, esi
 ___:015B232C                 call    dword ptr [eax+14h]
 
-ecx: 0x007F3C38
-eax: 0x0076D6C0
-[eax+14h]: 0x006FAC00 (Type I)
-N.B. [eax+30h]: 0x006F77D0 (Type III)
-edi: TCP packet payload received by client
+; ecx: 0x007F3C38
+; eax: 0x0076D6C0
+; [eax+14h]: 0x006FAC00 (Type I)
+; edi: TCP packet payload received by client
+
+; N.B. [eax+30h]: 0x006F77D0 (Type III)
 ```
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 $: complete, +: working, -: unsolved
