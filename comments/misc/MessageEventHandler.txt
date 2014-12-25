@@ -2,3 +2,6 @@ Login TCP
 ^ sub_403F98
   eax:0
   jmp [iosocket.dll+2180]
+  
+? eax:2
+  jmp iosocket.dll+20F0
