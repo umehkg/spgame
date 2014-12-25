@@ -6,6 +6,18 @@ unsigned long packetType = *(LPDWORD)(packet+0x4);
 Type I: 0x2807 / 0x29XX **TCP Packet** <br />
 Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
+```asm
+iosocketdll.dll
+___:015B2327                 mov     eax, [esi]
+___:015B2329                 push    edi
+___:015B232A                 mov     ecx, esi
+___:015B232C                 call    dword ptr [eax+14h]
+
+ecx: 0x007F3C38
+eax: 0x0076D6C0
+[eax+14h]: 0x006FAC00
+edi: TCP packet payload received by client
+```
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 $: complete, +: working, -: unsolved
 - 0x2807 sub_6F9910 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2807.txt">+</a> Login Response
