@@ -7,8 +7,8 @@ Type I: 0x2807 / 0x29XX **TCP Packet** <br />
 Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 ```asm
-iosocketdll.dll
-CClientTCPSocket::ReceiveProcess
+;iosocketdll.dll
+;CClientTCPSocket::ReceiveProcess
 ___:015B2327                 mov     eax, [esi]
 ___:015B2329                 push    edi
 ___:015B232A                 mov     ecx, esi
