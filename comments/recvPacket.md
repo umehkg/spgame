@@ -1,4 +1,5 @@
-CClientTCPSocket::GetSocket(void) returns unsigned long packetType
+NOTE: CClientTCPSocket::GetSocket should be CGenericMesssage::GetType, due to problems in IAT.
+CGenericMesssage::GetType(void) returns unsigned long packetType
 ```C++
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
