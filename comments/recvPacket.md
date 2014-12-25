@@ -84,4 +84,3 @@ Incomplete listing of Type III: <br /> UDP?
 - 0x4304: sub_6DC770 LobbyInfo (rooms)
 - case 6: sub_6DEAA0 "CreateRoom - End"
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
-- 
