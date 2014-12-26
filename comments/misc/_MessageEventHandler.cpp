@@ -99,7 +99,7 @@ signed int __stdcall sub_4037D0(HWND hWnd, signed int Msg, WPARAM wParam, unsign
     {
       if ( Msg == 1035 )
       {
-        CClientTCPSocket::EvaluateSocket(&off_800518);
+        CClientTCPSocket::EvaluateSocket(&off_800518); //Type III
       }
       else
       {
@@ -109,7 +109,7 @@ signed int __stdcall sub_4037D0(HWND hWnd, signed int Msg, WPARAM wParam, unsign
           return 0;
         }
         if ( Msg == 1034 )
-          CClientTCPSocket::EvaluateSocket(&off_7F3C38);
+          CClientTCPSocket::EvaluateSocket(&off_7F3C38); //Type I
       }
       return DefWindowProcA(hWnd, v4, v5, lParam);
     }
