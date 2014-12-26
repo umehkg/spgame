@@ -3,7 +3,7 @@ CGenericMesssage::GetType(void) returns unsigned long packetType
 ```C++
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
-Type I
+Type I : Login Server (TCP)
 ------
 packetType = 0x2807 / 0x29XX **TCP Packet** <br />
 Recv Ref: sub_6FAC00
@@ -36,7 +36,7 @@ $: complete, +: working, -: unsolved
 - 0x2924 sub_6FA9F0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2924.txt">+</a> size 0x18 TCPSendLoop(size 0x1C)
 - 0x2925 sub_6FAAD0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2925.txt">$</a> Kick Client? (bring to login screen). Displays korean msg. (size 0x14) > jmp sub_4035D0
 
-Type II
+Type II: Game Server (UDP)
 --------
 packetType = 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
@@ -92,7 +92,7 @@ Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confir
 - 0x1139 case 57:
 - 0x1140 case 64: sub_706150 GameState == 4 ?
 
-Type III
+Type III: Lobby Server (TCP)
 -----------
 packetType: 0x4302~0x4490<br />
 
