@@ -11,8 +11,6 @@ unsigned long packetType = *(LPDWORD)(packet+0x4);
 Type I : Login Server (TCP)
 ------
 packetType = 0x2807 / 0x29XX **TCP Packet** <br />
-Recv Ref: sub_6FAC00
-https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 ```asm
 ;iosocketdll.dll
 ;CClientTCPSocket::ReceiveProcess
@@ -28,6 +26,7 @@ ___:015B232C                 call    dword ptr [eax+14h]
 
 ; N.B. [eax+30h]: 0x006F77D0 (Type III)
 ```
+Recv Ref: CClientTCPSocket::ReceiveProcess-> call<a href="https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp">sub_6FAC00</a> <br />
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 $: complete, +: working, -: unsolved
 - 0x2807 sub_6F9910 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2807.txt">+</a> Login Response
@@ -128,7 +127,7 @@ Init Ref: sub_484990 <br />
   (CClientTCPSocket *)(LPVOID)0x800518->InitClientTCP((HWND *)(LPVOID)0x800518, 1035, ip_addr, port);
 ```
 Recv Ref: ds:800518->+0x14=ds:76D6F0->**sub_6F77D0**<br />
-Note: The caller of this function is unknown!<br />
+Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 ```asm
 .text:006F7808                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
 .text:006F780D                 add     eax, 0FFFFBCFEh
