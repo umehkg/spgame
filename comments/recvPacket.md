@@ -3,7 +3,9 @@ CGenericMesssage::GetType(void) returns unsigned long packetType
 ```C++
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
-Type I: 0x2807 / 0x29XX **TCP Packet** <br />
+Type I
+------
+packetType = 0x2807 / 0x29XX **TCP Packet** <br />
 Recv Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 ```asm
@@ -34,7 +36,9 @@ $: complete, +: working, -: unsolved
 - 0x2924 sub_6FA9F0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2924.txt">+</a> size 0x18 TCPSendLoop(size 0x1C)
 - 0x2925 sub_6FAAD0 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2925.txt">$</a> Kick Client? (bring to login screen). Displays korean msg. (size 0x14) > jmp sub_4035D0
 
-Type II: 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
+Type II
+--------
+packetType = 0x1100~0x1140　**UDP Packet** Why do they share the same function? It's a mystery.<br />
 Ref: sub_70A4D0<br />
 ```asm
 .text:0070A527                 call    ?ReceiveLoop@CUDPSocket@@QAE_NIAAVCGenericRcvMsg@@@Z ; CUDPSocket::ReceiveLoop(uint,CGenericRcvMsg &)
@@ -88,7 +92,10 @@ Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confir
 - 0x1139 case 57:
 - 0x1140 case 64: sub_706150 GameState == 4 ?
 
-Type III: 0x4302~0x4490
+Type III
+-----------
+packetType: 0x4302~0x4490<br />
+
 Init Ref: sub_484990 <br />
 ```asm
 .text:004849AD                 mov     eax, [esi+2FE4h]
@@ -122,7 +129,7 @@ Note: The caller of this function is unknown!<br />
 .text:006F780D                 add     eax, 0FFFFBCFEh
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
-Incomplete listing of Type III: <br /> UDP?
+Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4302: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
 - 0x4303: sub_6D8B50
 - 0x4304: sub_6DC770 LobbyInfo (rooms)
