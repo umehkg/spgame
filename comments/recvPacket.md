@@ -89,7 +89,7 @@ Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confir
 - 0x1140 case 64: sub_706150 GameState == 4 ?
 
 Type III: 0x4302~0x4490
-Ref: sub_6F77D0<br />
+Ref: ds:800518->+0x14=ds:76D6F0->**sub_6F77D0**<br />
 Note: The caller of this function is unknown!<br />
 ```asm
 .text:006F7808                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
