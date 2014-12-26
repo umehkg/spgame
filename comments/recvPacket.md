@@ -1,3 +1,8 @@
+Navigation
+<a href="https://github.com/umehkg/spgame/blob/master/comments/recvPacket.md#type-i--login-server-tcp">1. Login Server (TCP)</a>
+<a href="https://github.com/umehkg/spgame/blob/master/comments/recvPacket.md#type-ii-game-server-udp">2. Game Server (UDP)
+<a href="https://github.com/umehkg/spgame/blob/master/comments/recvPacket.md#type-iii-lobby-server-tcp"> 3. Lobby Server (TCP) </a>
+
 NOTE: CClientTCPSocket::GetSocket should be CGenericMesssage::GetType, due to problems in IAT.
 CGenericMesssage::GetType(void) returns unsigned long packetType
 ```C++
