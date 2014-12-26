@@ -26,7 +26,7 @@ ___:015B232C                 call    dword ptr [eax+14h]
 
 ; N.B. [eax+30h]: 0x006F77D0 (Type III)
 ```
-Recv Ref: CClientTCPSocket::ReceiveProcess-> call<a href="https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp">sub_6FAC00</a> <br />
+Recv Ref: CClientTCPSocket::ReceiveProcess-> call <a href="https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp">sub_6FAC00</a> <br />
 Complete listing of Type I functions (10 of them): Confirmed TCP <br />
 $: complete, +: working, -: unsolved
 - 0x2807 sub_6F9910 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x2807.txt">+</a> Login Response
