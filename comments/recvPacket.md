@@ -4,7 +4,7 @@ CGenericMesssage::GetType(void) returns unsigned long packetType
 unsigned long packetType = *(LPDWORD)(packet+0x4);
 ```
 Type I: 0x2807 / 0x29XX **TCP Packet** <br />
-Ref: sub_6FAC00
+Recv Ref: sub_6FAC00
 https://github.com/umehkg/spgame/blob/master/src/sp/2FAC00_RecvPacket.cpp <br />
 ```asm
 ;iosocketdll.dll
@@ -89,7 +89,33 @@ Complete listing of Type II ( packetType = 0x1100 + dec2hex(caseNumber) ) Confir
 - 0x1140 case 64: sub_706150 GameState == 4 ?
 
 Type III: 0x4302~0x4490
-Ref: ds:800518->+0x14=ds:76D6F0->**sub_6F77D0**<br />
+Init Ref: sub_484990 <br />
+```asm
+.text:004849AD                 mov     eax, [esi+2FE4h]
+.text:004849B3                 mov     ecx, [esi+2FE8h]
+.text:004849B9                 lea     eax, [eax+eax*4]
+.text:004849BC                 lea     eax, [ecx+eax*8]
+.text:004849BF                 mov     edx, [esi+eax*4+0AC0h]
+.text:004849C6                 mov     ecx, ds:wParam
+.text:004849CC                 push    edx
+.text:004849CD                 shl     eax, 4
+.text:004849D0                 lea     eax, [eax+esi+0B4h]
+.text:004849D7                 push    eax
+.text:004849D8                 push    40Bh
+.text:004849DD                 push    ecx
+.text:004849DE                 mov     ecx, offset off_800518
+.text:004849E3                 nop
+.text:004849E4                 call    ?InitClientTCP@CClientTCPSocket@@QAE_NPAUHWND__@@IPADH@Z ; CClientTCPSocket::InitClientTCP(HWND pWnd*,uint wMsg,char * ip_addr, int port)
+```
+```C++
+  long channelIdx = *(long *)(*(long *)0x7F0BD8+0x2FE4) * 40 + *(long *)(*(long *)0x7F0BD8+0x2FE8);
+  char ip_addr[15];
+  long port = *(long *)(*(long *)0x7F0BD8+0xAC0+channelIdx*4);
+  
+  memcpy(&ip_addr[0], (char *)(*(long *)0x7F0BD8+0xB4+channelIdx*16), 16);
+  (CClientTCPSocket *)(LPVOID)0x800518->InitClientTCP((HWND *)(LPVOID)0x800518, 1035, ip_addr, port);
+```
+Recv Ref: ds:800518->+0x14=ds:76D6F0->**sub_6F77D0**<br />
 Note: The caller of this function is unknown!<br />
 ```asm
 .text:006F7808                 call    ?GetSocket@CClientTCPSocket@@QAEIXZ ; CClientTCPSocket::GetSocket(void)
