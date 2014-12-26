@@ -3,6 +3,7 @@ Comments
 26 Dec 2014
 -----
 - No success in Type III so far. Finding the reason...
+- Confirm Type III is Lobby Server TCP. It inits after entering a channel.
 
 25 Dec 2014
 -----
