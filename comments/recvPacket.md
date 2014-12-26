@@ -108,11 +108,11 @@ Init Ref: sub_484990 <br />
 .text:004849E4                 call    ?InitClientTCP@CClientTCPSocket@@QAE_NPAUHWND__@@IPADH@Z ; CClientTCPSocket::InitClientTCP(HWND pWnd*,uint wMsg,char * ip_addr, int port)
 ```
 ```C++
-  long channelIdx = *(long *)(*(long *)0x7F0BD8+0x2FE4) * 40 + *(long *)(*(long *)0x7F0BD8+0x2FE8);
+  long channelIdx = *(long *)(0x7F0BD8+0x2FE4) * 40 + *(long *)(0x7F0BD8+0x2FE8);
   char ip_addr[15];
-  long port = *(long *)(*(long *)0x7F0BD8+0xAC0+channelIdx*4);
+  long port = *(long *)(0x7F0BD8+0xAC0+channelIdx*4);
   
-  memcpy(&ip_addr[0], (char *)(*(long *)0x7F0BD8+0xB4+channelIdx*16), 16);
+  memcpy(&ip_addr[0], (char *)(0x7F0BD8+0xB4+channelIdx*16), 16);
   (CClientTCPSocket *)(LPVOID)0x800518->InitClientTCP((HWND *)(LPVOID)0x800518, 1035, ip_addr, port);
 ```
 Recv Ref: ds:800518->+0x14=ds:76D6F0->**sub_6F77D0**<br />
