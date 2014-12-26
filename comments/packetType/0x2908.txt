@@ -25,7 +25,7 @@ packet+0x30 < char [28] //channel name
 packet+0x4D < char [12] //dominating guild name
 packet+0x5A ?? not used
 packet+0x5C < channel max population allowed (default minimum=200)
-packet+0x60 < BYTE guild related? (bool) (1=cmp w/ playerGuild)
+packet+0x60 < BYTE guild related??? (bool) (1=cmp w/ playerGuild)
 packet+0x61 ?? not used
-packet+0x64 < dword ??? cmp sub_469850 possible values = -1, 0
+packet+0x64 < dword ??? cmp sub_469850 possible values = -1, 0 (-1 is default?)
 packetSize = 0x68
