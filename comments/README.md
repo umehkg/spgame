@@ -1,5 +1,9 @@
 Comments
 =====
+27 Dec 2014
+-----
+- Found formula for calculating exp needed for each level
+
 26 Dec 2014
 -----
 - No success in Type III so far. Finding the reason...
