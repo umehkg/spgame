@@ -50,15 +50,15 @@ packet+0x400 <
 packet+0x580 <
 packet+0x700 <
 packet+0x880 < //+1568 player inventory slot count
-packet+0x884 < //higher 4 bytes : +1460~+1548 lower 4 bytes: from p+0x938
+packet+0x884 < //higher 4 bytes : +1460~+1548 lower 4 bytes: from p+0x938 EXP for each lvl
 ...
-packet+0x8F8~+0x914 < //DWORD +1548~+1564
+packet+0x8F8~+0x914 < //DWORD +1548~+1564 EXP for each lvl (29/+)
 packet+0x918 < //+2D9C
 packet+0x928 < switch 0~4 inclusive //+2E0C
 packet+0x92C < switch 1~4 inclusive //+2E10
 packet+0x930 < //+2E14
 packet+0x934 < //+2E18
-packet+0x938 < //+2E1C
+packet+0x938 < //+2E1C (must be 0)
 packet+0x93C~0x943 < BYTE //+2e01~+2e08 //+2e05/+2e07 set 0(?V) by if(+cc0 == 0x244) ??
 packet+0x944 < //+CB4 ??
 packet+0x948 < BYTE //+31f9 ??
