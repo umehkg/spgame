@@ -35,25 +35,25 @@ char __thiscall sub_674B70(int this)
   result = *(_BYTE *)(this + 136);
   if ( result )
   {
-    sub_72DEB0();
+    sub_72DEB0(); //main wnd interface
     v3 = *(_DWORD *)(v1 + 80);
     v4 = *(_DWORD *)(v1 + 84);
-    v27 = *(_DWORD *)(dword_7EF97C + 11860) - 1;
+    v27 = *(_DWORD *)(dword_7EF97C + 11860) - 1; //MyInfo->0x2E54
     if ( v27 < 0 )
       v27 = 0;
-    sub_409290(*(_DWORD *)(dword_7EF97C + 3484), v3 + 23, v4 + 48, 0);
-    sub_409250(*(_BYTE *)(dword_7EF97C + 3235), v3 + 38, v4 + 48);
-    sub_715D40((HDC)(v3 + 55), v4 + 49, 0xCFC1C3u, 0xCFC1C3u, 0, -1, (int)&dword_76D980, dword_7EF97C + 3196);
-    sub_674820(v3 + 77, v4 + 125);
-    v5 = dword_7EF97C + 3209;
+    sub_409290(*(_DWORD *)(dword_7EF97C + 3484), v3 + 23, v4 + 48, 0); //playerLevel (MyInfo->0xD9C)
+    sub_409250(*(_BYTE *)(dword_7EF97C + 3235), v3 + 38, v4 + 48); //playerGender (MyInfo->0xCA3)
+    sub_715D40((HDC)(v3 + 55), v4 + 49, 0xCFC1C3u, 0xCFC1C3u, 0, -1, (int)&dword_76D980, dword_7EF97C + 3196); //playerUsername (MyInfo->0xC7C)
+    sub_674820(v3 + 77, v4 + 125); //loads playerCharacter(?
+    v5 = dword_7EF97C + 3209; //playerGuild (MyInfo->0xC89)
     do
       v6 = *(_BYTE *)v5++;
     while ( v6 );
     v7 = v3 - 6 * (v5 - (dword_7EF97C + 3210)) + 243;
     sub_46A2F0();
-    sub_469930(v7, v4 + 58, dword_7EF97C + 3209, 0);
-    sub_715D40((HDC)(v3 + 257), v4 + 58, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3209);
-    sub_715D40((HDC)(v3 + 257), v4 + 76, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3222);
+    sub_469930(v7, v4 + 58, dword_7EF97C + 3209, 0); //playerGuild (MyInfo->0xC89)
+    sub_715D40((HDC)(v3 + 257), v4 + 58, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3209); //playerGuild (MyInfo->0xC89)
+    sub_715D40((HDC)(v3 + 257), v4 + 76, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3222); //playerGuildTitle (MyInfo->0xC96)
     if ( v27 >= 300 )
       sub_715D40((HDC)(v3 + 257), v4 + 94, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)dword_7B09DC, v27 / 300);
     else
@@ -69,8 +69,8 @@ char __thiscall sub_674B70(int this)
       *(_DWORD *)(dword_7EF97C + 3500));
     sub_715D40((HDC)(v3 + 257), v4 + 130, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)"%d", *(_DWORD *)(dword_7EF97C + 3492));
     sub_715D40((HDC)(v3 + 257), v4 + 148, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)"%d", *(_DWORD *)(dword_7EF97C + 3496));
-    sub_715D40((HDC)(v3 + 257), v4 + 166, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 4052);
-    sub_715D40((HDC)(v3 + 257), v4 + 184, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3532);
+    sub_715D40((HDC)(v3 + 257), v4 + 166, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 4052); //point??
+    sub_715D40((HDC)(v3 + 257), v4 + 184, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3532); //code??
     sub_715D40((HDC)(v3 + 257), v4 + 201, 0xCFC1C3u, 0xCFC1C3u, 0, 1, (int)&dword_76D980, dword_7EF97C + 3792);
     sub_6749B0(v3, v4);
     sub_715D40((HDC)(v3 + 443), v4 + 56, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)"%d", *(_DWORD *)(v1 + 960));
@@ -88,7 +88,7 @@ char __thiscall sub_674B70(int this)
       (int)"%d",
       *(_DWORD *)(dword_7EF97C + 11860) - *(_DWORD *)(dword_7EF97C + 11868));
     sub_715D40((HDC)(v3 + 480), v4 + 120, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)"%d", *(_DWORD *)(dword_7EF97C + 12688));
-    sub_715D40((HDC)(v3 + 480), v4 + 141, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)&dword_76D980, v1 + 156);
+    sub_715D40((HDC)(v3 + 480), v4 + 141, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)&dword_76D980, v1 + 156);//MyInfo->0x9C
     sub_715D40((HDC)(v3 + 480), v4 + 163, 0x98C902u, 0x98C902u, 1, 1, (int)&dword_76D980, v1 + 416);
     sub_715D40((HDC)(v3 + 382), v4 + 183, 0xE5A60Du, 0xE5A60Du, 1, 1, (int)"%d", *(_DWORD *)(v1 + 936));
     sub_715D40((HDC)(v3 + 420), v4 + 183, 0x131FEu, 0x131FEu, 1, 1, (int)"%d", *(_DWORD *)(v1 + 940));
@@ -98,12 +98,12 @@ char __thiscall sub_674B70(int this)
     sub_715D40((HDC)(v3 + 456), v4 + 248, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)"%d", *(_DWORD *)(dword_7EF97C + 12692));
     sub_715D40((HDC)(v3 + 441), v4 + 270, 0xD5F7FAu, 0xD5F7FAu, 1, 1, (int)"%d", *(_DWORD *)(dword_7EF97C + 12696));
     sub_715D40((HDC)(v3 + 458), v4 + 270, 0xD5F7FAu, 0xD5F7FAu, 1, -1, (int)"%d", *(_DWORD *)(dword_7EF97C + 12700));
-    v8 = CFrameTimer::GetTotalSec(dword_76D070) - *(_DWORD *)(dword_7EF97C + 4336);
-    v29 = v8 / 0xEA60;
+    v8 = CFrameTimer::GetTotalSec(dword_76D070) - *(_DWORD *)(dword_7EF97C + 4336); //MyInfo->0x10F0
+    v29 = v8 / 0xEA60; //0xEA60 = 60000ms = 60 seconds = 1min
     v28 = 2;
     if ( (unsigned __int8)((int (*)(void))sub_4768A0)() )
       v28 = 4;
-    v9 = v28 * v29 / 0x1Eu;
+    v9 = v28 * v29 / 0x1Eu; //0x1E = 30 (mins)
     v10 = *(_DWORD *)(dword_7EF97C + 3236);
     switch ( v10 )
     {
@@ -167,7 +167,7 @@ char __thiscall sub_674B70(int this)
       v19 = v3 + 199;
     }
     sub_715D40((HDC)v19, v20, v21, v22, v23, v24, v25, v26);
-    v30 = (double)(v8 % 0x1B7740) * 0.0000005555555555555555;
+    v30 = (double)(v8 % 0x1B7740) * 0.0000005555555555555555; //0x1B7740=1800000ms=1800s=30m
     if ( dword_80DEFC )
     {
       if ( v30 >= 1.0 )
