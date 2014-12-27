@@ -62,7 +62,7 @@ packet+0x938 < //+2E1C (must be 0)
 packet+0x93C~0x943 < BYTE //+2e01~+2e08 //+2e05/+2e07 set 0(?V) by if(+cc0 == 0x244) ??
 packet+0x944 < //+CB4 ??
 packet+0x948 < BYTE //+31f9 ??
-packet+0x94C < //+31fc
+packet+0x94C < //+31fc lobby max rooms
 packet+0x950~0x968 < DWORD //+2d48~+2d60
 packet+0x96C ?? not used
 packet+0x970 < //+cc0 compared with 0x244(580dec) 
