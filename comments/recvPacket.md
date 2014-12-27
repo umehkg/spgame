@@ -155,4 +155,4 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4485: case 387: sub_6DC5D0
 - 0x4487: case 389: sub_6DC6D0
 - 0x4488: case 390: sub_6DC700
-- 0x4490: case 398: sub_6EA540
+- 0x4490: case 398: sub_6EA540 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4490.txt">+</a>
