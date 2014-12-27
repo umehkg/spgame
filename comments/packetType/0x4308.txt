@@ -1,0 +1,17 @@
+
+Summary:
+packetType = 0x4308
+packet+0x14 < possible values: 0, 1, 3, 4, else (valid: 2)
+packet+0x18 <
+packet+0x1C <
+packet+0x3C <
+packet+0x40 <
+packet+0x54 < 
+packet+0x59 < BYTE
+packet+0x60 < BYTE
+packet+0x61 ?? not used
+packet+0x64 <
+packet+0x68 < WORD
+packet+0x6A < BYTE
+packet+0x6B < BYTE
+packetSize = 0x6C
