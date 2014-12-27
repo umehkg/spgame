@@ -137,5 +137,7 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4302: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
 - 0x4303: sub_6D8B50
 - 0x4304: sub_6DC770 LobbyInfo (rooms)
-- case 6: sub_6DEAA0 "CreateRoom - End"
+- 0x4308: case 6: sub_6DEAA0 "CreateRoom - End"
+- 0x4312: case 16: sub_6DCC50 ;<"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
+- 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
 - case 62: sub_6ED420 GameState == 4 ? confirm, playerName
