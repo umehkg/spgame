@@ -136,7 +136,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4302: case 0: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
 - 0x4303: case 1: sub_6D8B50
-- 0x4304: case 2: sub_6DC770 LobbyInfo (rooms)
+- 0x4304: case 2: sub_6DC770 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4304.txt">+</a> LobbyInfo (rooms)
 - 0x4305: case 3: sub_6D8C50
 - 0x4306: case 4: sub_6D8BC0
 - 0x4308: case 6: sub_6DEAA0 "CreateRoom - End"
@@ -145,6 +145,9 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
 - 0x4317: case 21: sub_6F3F60 ; <">> Guild conditions has been canceled. <<", ".\CClientGameMsg.cpp"
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
+- 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
+- 0x4372: case 112: sub_6E1BC0 ; <"void CGameUserShopResultMsg::Process-1", ".\CClientGameMsg.cpp", "ASSERT Fail,return
+- 0x4373: case 113: sub_6D9A50 ; <"CGameUserShopInfoMsg::Process -0", "CGameUserShopInfoMsg state:%d, id:%s, shop_name:%s", 
 - 0x4385: case 131: sub_6E25B0  ; <"Software\IOSPK\EVENT", "SPCARD">
 - 0x4461: case 351: sub_6E8730 ; <"Bonus Visit State Error.", ".\CClientGameMsg.cpp",
 - 0x4481: case 383: sub_6DCA20
