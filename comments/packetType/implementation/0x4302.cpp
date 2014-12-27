@@ -5,6 +5,16 @@ long *playerCardAttribPtr0 = (long *)calloc(96, 4);
 long *playerCardAttribPtr1 = (long *)calloc(96, 4);
 long *playerCardAttribPtr2 = (long *)calloc(96, 4);
 long *playerCardAttribPtr3 = (long *)calloc(96, 4);
+//const
+const long minPointForLevelDword[29] = {-5L, 1L, 50L, 100L,
+                                    200L, 400L, 800L, 1600L,
+                                    2400L, 3200L, 6400L, 12800L,
+                                    25600L, 51200L, 102400L, 204800L,
+                                    409600L, 819200L, 1638400L, 3276800L,
+                                    6553600L, 13107200L, 26214400L, 52428800L,
+                                    104857600L, 209715200L, 419430400L, 838860800L,
+                                    1677721600L};
+const long long minPointForLevelQword[4] = {3355443200LL, 6710886400LL, 13421772800LL, 26843545600LL};
 //initial values
 char guildName[12] = "HKGolden";
 char guildTitle[12] = "Developer";
@@ -19,6 +29,8 @@ long playerWins = 0;
 long playerLoses = 0;
 long playerKOs = 0;
 long playerDowns = 0;
+//
+long lobbyMaxRooms = 300;
 /* calculate channel flag from playerLevel */
 long channelFlag = (playerLevel == 0) ? 0 : (playerLevel >= 17) ? 30 : (playerLevel >= 13) ? 20 : 10;
 
@@ -66,6 +78,11 @@ memcpy(myData+0x700-0x14, playerCardAttrib3Ptr, 4*96);
 
 memcpy(myData+0x880-0x14, &playerInventorySlots, 4);
 
+for (int i = 0; i < 29; i++)
+  memcpy(myData+0x884+i*8-0x14, &minPointForLevelDword[i], 4);
+memcpy(myData+0x8F8-0x14, &minPointForLevelQword[0], 4*8);
+
+memcpy(myData+0x94C-0x14, &lobbyMaxRooms, 4);
 memcpy(myData+0x974-0x14, &playerType, 4);
 
 
