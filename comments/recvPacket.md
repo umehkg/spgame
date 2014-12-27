@@ -134,14 +134,22 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
 Incomplete listing of Type III: **TCP Packet** <br />
-- 0x4302: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
-- 0x4303: sub_6D8B50
-- 0x4304: sub_6DC770 LobbyInfo (rooms)
-- 0x4305: sub_6D8C50
-- 0x4306: sub_6D8BC0
+- 0x4302: case 0: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
+- 0x4303: case 1: sub_6D8B50
+- 0x4304: case 2: sub_6DC770 LobbyInfo (rooms)
+- 0x4305: case 3: sub_6D8C50
+- 0x4306: case 4: sub_6D8BC0
 - 0x4308: case 6: sub_6DEAA0 "CreateRoom - End"
 - 0x4310: case 14: sub_6D8D40 //cmp playerUsername
 - 0x4312: case 16: sub_6DCC50 ;<"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
 - 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
 - 0x4317: case 21: sub_6F3F60 ; <">> Guild conditions has been canceled. <<", ".\CClientGameMsg.cpp"
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
+- 0x4385: case 131: sub_6E25B0  ; <"Software\IOSPK\EVENT", "SPCARD">
+- 0x4461: case 351: sub_6E8730 ; <"Bonus Visit State Error.", ".\CClientGameMsg.cpp",
+- 0x4481: case 383: sub_6DCA20
+- 0x4483: case 385: sub_6DC570
+- 0x4485: case 387: sub_6DC5D0
+- 0x4487: case 389: sub_6DC6D0
+- 0x4488: case 390: sub_6DC700
+- 0x4490: case 398: sub_6EA540
