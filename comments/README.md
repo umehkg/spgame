@@ -1,5 +1,9 @@
 Comments
 =====
+29 Dec 2014
+-----
+- Future tests must be based on Lobby Server (Type III).
+
 27 Dec 2014
 -----
 - Found formula for calculating exp needed for each level
