@@ -83,6 +83,7 @@ CPacket::CPacket(unsigned long packetType)
 	memcpy(m_payload+8, new unsigned long(0x2B1C), sizeof(long)); //magic number for packet header
 	memcpy(m_payload+0xC, new unsigned long(0), sizeof(long)); //placeholder for digest
 	memcpy(m_payload+0x10, new unsigned long(0xFFFFFFFF), sizeof(long)); //packet state. valid values are unknown
+	makeDigest();
 }
 
 CPacket::CPacket(unsigned long packetType, const void *data, size_t dataSize)
