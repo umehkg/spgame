@@ -1,12 +1,7 @@
 /*
-Version 20141225a
+Version 20141229
 
 */
-typedef struct _LOGIN_INFO
-{
-        char id[12];
-        char pw[12];
-} LOGIN_INFO, *PLOGIN_INFO;
 class CPacket
 {
 private: //encapsulation
@@ -14,18 +9,18 @@ private: //encapsulation
         unsigned int m_type;
         unsigned char *m_payload;
         bool m_isEncrypted;
-        PLOGIN_INFO m_pLoginInfo;
         void getLoginInfo();
 		unsigned long makeDigest();
 public:
-		CPacket(unsigned long, const void *, size_t); //use for server send
-        CPacket(const void *, size_t, bool); //use for server recv
+		CPacket(unsigned long packetType, const void *data, size_t dataSize); //use for server send
+        CPacket(const void *payload, size_t dataSize, bool isEncrypted); //use for server recv
         ~CPacket();
 		size_t GetSize();
 		unsigned long GetType();
+		void AppendData(void *dataBuffer, size_t dataSize);
         void Encrypt();
         void Decrypt();
-        void Output(char *, int); //output payload to buffer passed as argument
-		void Output(unsigned char *, int);//since you really like unsigned :S
-        void OutputLoginInfo(PLOGIN_INFO);
+		bool CheckPacket();
+        void Output(char *outBuffer); //output payload to buffer passed as argument
+		void Output(unsigned char * outBuffer);//since you really like unsigned :S
 };
