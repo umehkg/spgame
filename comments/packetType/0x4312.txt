@@ -24,4 +24,4 @@ packet+0x40 < char[12][8] sizeof() = 0xD player names in room
 packet+0xA8 < DWORD[8] ?? (v15 = p+0xA8 - p+0x18)
 packet+0xC8 < DWORD idx of Room Owner?
 
-packetSize = 0xD0
+packetSize = 0xCC
