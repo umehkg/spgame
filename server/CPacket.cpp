@@ -3,21 +3,15 @@
 #include "md5.h"
 
 /*
-Version 20141225a
+Version 20141229
 
 */
 
-void CPacket::getLoginInfo()
-{
-        m_pLoginInfo = new LOGIN_INFO;
-        memcpy(&m_pLoginInfo->id[0], (char *)(void *)(m_payload+0x3C),0xC);
-        memcpy(&m_pLoginInfo->pw[0], (char *)(void *)(m_payload+0x49),0xC);
-}
 
 unsigned long CPacket::makeDigest()
 {
 	bool origCryptState = false;
-	char buf[0x11];
+	char buf[0x10];
 	if ( *(long *)(m_payload+0xC) != 0 )
 		memcpy(m_payload+0xC, new unsigned long(0), sizeof(long));
 	if (m_isEncrypted)
@@ -32,8 +26,58 @@ unsigned long CPacket::makeDigest()
 	return sp_md5;
 }
 
+void CPacket::AppendData(void *dataBuffer, size_t dataSize)
+{
+	bool origCryptState = false;
+	if (m_isEncrypted)
+		origCryptState = true;
+	if (origCryptState)
+		Decrypt();
+
+	if (dataSize <= 0)
+		return;
+	if (m_len + dataSize > 0x4014)
+		return;
+	unsigned char *new_payload = (unsigned char *)malloc(m_len+dataSize);
+	memcpy(new_payload, m_payload, m_len); //copy old payload
+	memcpy(new_payload+m_len, dataBuffer, dataSize); //append new data
+	/* refresh the m_payload buffer */
+	free(m_payload);
+	m_len += dataSize;
+	m_payload = (unsigned char *)malloc(m_len);
+	memcpy(m_payload, new_payload, m_len);
+	free(new_payload);
+
+	makeDigest(); //refreshes digest
+
+	if (origCryptState)
+		Encrypt();
+}
+
+bool CPacket::CheckPacket()
+{
+	bool origCryptState = false;
+	if (m_isEncrypted)
+		origCryptState = true;
+	if (origCryptState)
+		Decrypt();
+	unsigned long orig_header = *(unsigned long *)(m_payload+0x8);
+	unsigned long orig_sp_md5 = *(unsigned long *)(m_payload+0xC);
+	if (origCryptState)
+		Encrypt();
+	if (orig_header != 0x2B1C)
+		return false;
+	if (orig_sp_md5 != makeDigest())
+		return false; //checksum failed
+	return true;
+}
+
 CPacket::CPacket(unsigned long packetType, const void *data, size_t dataSize)
 {
+	if (dataSize < 0)
+		return;
+	if (dataSize > 0x4000)
+		return;
 	m_len = dataSize + 0x14;
 	m_type = packetType;
 	m_payload = (unsigned char *)malloc(m_len);
@@ -52,14 +96,14 @@ CPacket::CPacket(const void *payload, size_t dataSize, bool isEncrypted)
         m_len = *(long *)payload; //get payload size from first 4 bytes of payload
         if (m_len < 4)
                 return; //error: packet size too small
+		if (m_len > 0x4014)
+				return; //error: too large
         if (m_len != dataSize)
                 return; //error: packet size mismatch
         m_type = *(long *)((unsigned long)payload+4);
         m_payload = (unsigned char *)malloc(m_len);
         memcpy(m_payload, payload, m_len);
         m_isEncrypted = isEncrypted;
-        if (m_type == 0x2707)
-                getLoginInfo();
 }
 
 CPacket::~CPacket()
@@ -72,6 +116,7 @@ size_t CPacket::GetSize()
 {
 	return m_len;
 }
+
 unsigned long CPacket::GetType()
 {
 	return m_type;
@@ -106,16 +151,11 @@ void CPacket::Decrypt()
         m_isEncrypted = false;
 }
  
-void CPacket::Output(char *outBuffer, int m_len)
+void CPacket::Output(char *outBuffer)
 {
         memcpy(outBuffer, m_payload, m_len);
 }
-void CPacket::Output(unsigned char *outBuffer, int m_len)
+void CPacket::Output(unsigned char *outBuffer)
 {
         memcpy(outBuffer, m_payload, m_len);
-}
-void CPacket::OutputLoginInfo(PLOGIN_INFO pLoginInfo)
-{
-        memcpy(&pLoginInfo->id[0], &m_pLoginInfo->id[0], 0xC);
-        memcpy(&pLoginInfo->pw[0], &m_pLoginInfo->pw[0], 0xC);
 }
