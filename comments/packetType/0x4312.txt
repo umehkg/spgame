@@ -1,0 +1,27 @@
+Ref: sub_6DCC50
+
+loc_6DCCC0:
+cmp     dword ptr [ecx-90h], 0FFFFFF9Dh   ; -99 (dec)
+jnz     short loc_6DCCE0
+; ecx = ds:dword_76D3B4
+
+.text:006DCCFF                 mov     ecx, ds:dword_7EF97C
+.text:006DCD05                 cmp     ebp, [ecx+31FCh]
+.text:006DCD0B                 jge     short loc_6DCD4C           ;"Over Room Array Number"
+; test if [821810] is larger or equal 
+; Over Room Array Number means room array length (ds:821810) is exceeded 
+
+->sub_67E9C0(p+0xC8, p+0x18, p+0x38, p+0x40, p+0xA8);
+
+-----------------------------------------------------------------------------------------
+Summary:
+packetType = 0x4312
+
+packet+0x14 < DWORD %d of "CGameRoomInfoResultMsg - Result Type:%d" 1 or non-1 (0), use 0
+packet+0x18 < dword[8] ?? //if element == -99, the element struct is voided
+packet+0x38 < BYTE[8] ?? 0 or 1. passing all zeros may be fine?
+packet+0x40 < char[12][8] sizeof() = 0xD player names in room
+packet+0xA8 < DWORD[8] ?? (v15 = p+0xA8 - p+0x18)
+packet+0xC8 < DWORD idx of Room Owner?
+
+packetSize = 0xD0
