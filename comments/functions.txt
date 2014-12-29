@@ -14,3 +14,4 @@
 459870 "Load RoomResource - Start"
 6DC770 room info
 4037D0 Main Message Event Handler
+47A0A0 reset player data
