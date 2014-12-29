@@ -12,6 +12,7 @@ private: //encapsulation
         void getLoginInfo();
 		unsigned long makeDigest();
 public:
+		CPacket(unsigned long packetType);
 		CPacket(unsigned long packetType, const void *data, size_t dataSize); //use for server send
         CPacket(const void *payload, size_t dataSize, bool isEncrypted); //use for server recv
         ~CPacket();
