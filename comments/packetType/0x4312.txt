@@ -18,7 +18,7 @@ Summary:
 packetType = 0x4312
 
 packet+0x14 < DWORD %d of "CGameRoomInfoResultMsg - Result Type:%d" 1 or non-1 (0), use 0
-packet+0x18 < dword[8] ?? //if element == -99, the element struct is voided
+packet+0x18 < dword[8] player levels (0~32 dec) //if element == -99, the element struct is voided
 packet+0x38 < BYTE[8] ?? 0 or 1. passing all zeros may be fine?
 packet+0x40 < char[12][8] sizeof() = 0xD player names in room
 packet+0xA8 < DWORD[8] ?? (v15 = p+0xA8 - p+0x18)
