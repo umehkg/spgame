@@ -72,6 +72,19 @@ bool CPacket::CheckPacket()
 	return true;
 }
 
+CPacket::CPacket(unsigned long packetType)
+{
+	m_len = 0x14;
+	m_type = packetType;
+	m_payload = (unsigned char *)malloc(m_len);
+	m_isEncrypted = false;
+	memcpy(m_payload, &m_len, sizeof(long));
+	memcpy(m_payload+4, &m_type, sizeof(long));
+	memcpy(m_payload+8, new unsigned long(0x2B1C), sizeof(long)); //magic number for packet header
+	memcpy(m_payload+0xC, new unsigned long(0), sizeof(long)); //placeholder for digest
+	memcpy(m_payload+0x10, new unsigned long(0xFFFFFFFF), sizeof(long)); //packet state. valid values are unknown
+}
+
 CPacket::CPacket(unsigned long packetType, const void *data, size_t dataSize)
 {
 	if (dataSize < 0)
