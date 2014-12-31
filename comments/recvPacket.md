@@ -140,7 +140,7 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4305: case 3: sub_6D8C50 Nothing
 - 0x4306: case 4: sub_6D8BC0 
 - 0x4308: case 6: sub_6DEAA0 "CreateRoom - End"
-- 0x4310: case 14: sub_6D8D40 CharacterInfo? Game //cmp playerUsername
+- 0x4310: case 14: sub_6D8D40 MessageWnd/PlayerInfoWnd //cmp playerUsername
 - 0x4312: case 16: sub_6DCC50 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4312.txt">+</a> ; RoomInfoWnd <"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
 - 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
 - 0x4317: case 21: sub_6F3F60 ; <">> Guild conditions has been canceled. <<", ".\CClientGameMsg.cpp"
