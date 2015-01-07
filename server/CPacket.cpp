@@ -3,7 +3,7 @@
 #include "md5.h"
 
 /*
-Version 20141229
+Version 20150107
 
 */
 
@@ -38,16 +38,9 @@ void CPacket::AppendData(void *dataBuffer, size_t dataSize)
 		return;
 	if (m_len + dataSize > 0x4014)
 		return;
-	unsigned char *new_payload = (unsigned char *)malloc(m_len+dataSize);
-	memcpy(new_payload, m_payload, m_len); //copy old payload
-	memcpy(new_payload+m_len, dataBuffer, dataSize); //append new data
-	/* refresh the m_payload buffer */
-	free(m_payload);
+	m_payload = (unsigned char *)realloc(m_len+dataSize);
 	m_len += dataSize;
-	m_payload = (unsigned char *)malloc(m_len);
-	memcpy(m_payload, new_payload, m_len);
-	free(new_payload);
-
+	
 	makeDigest(); //refreshes digest
 
 	if (origCryptState)
