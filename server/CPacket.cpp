@@ -38,9 +38,16 @@ void CPacket::AppendData(void *dataBuffer, size_t dataSize)
 		return;
 	if (m_len + dataSize > 0x4014)
 		return;
-	m_payload = (unsigned char *)realloc(m_len+dataSize);
+
+	if (m_len + dataSize > m_mlen)
+	{
+		m_payload = (unsigned char *)realloc(m_payload, m_mlen<<1);
+		m_mlen <<= 1;
+	}
+
+	memcpy(m_payload+m_len, dataBuffer, dataSize);
 	m_len += dataSize;
-	
+
 	makeDigest(); //refreshes digest
 
 	if (origCryptState)
@@ -67,15 +74,28 @@ bool CPacket::CheckPacket()
 
 CPacket::CPacket(unsigned long packetType)
 {
-	m_len = 0x14;
+	m_mlen = m_len = 0x14;
 	m_type = packetType;
-	m_payload = (unsigned char *)malloc(m_len);
+	m_payload = (unsigned char *)malloc(m_mlen);
 	m_isEncrypted = false;
 	memcpy(m_payload, &m_len, sizeof(long));
 	memcpy(m_payload+4, &m_type, sizeof(long));
 	memcpy(m_payload+8, new unsigned long(0x2B1C), sizeof(long)); //magic number for packet header
 	memcpy(m_payload+0xC, new unsigned long(0), sizeof(long)); //placeholder for digest
 	memcpy(m_payload+0x10, new unsigned long(0xFFFFFFFF), sizeof(long)); //packet state. valid values are unknown
+	makeDigest();
+}
+
+CPacket::CPacket(unsigned long packetType, size_t packetSize)
+{
+	if (packetSize < 0x14)
+		return;
+	if (packetSize > 0x4014)
+		return;
+	m_isEncrypted = false;
+	m_mlen = m_len = packetSize;
+	m_type = packetType;
+	m_payload = (unsigned char *)calloc(m_mlen, 0x1);
 	makeDigest();
 }
 
@@ -85,30 +105,53 @@ CPacket::CPacket(unsigned long packetType, const void *data, size_t dataSize)
 		return;
 	if (dataSize > 0x4000)
 		return;
-	m_len = dataSize + 0x14;
+	m_mlen = m_len = dataSize + 0x14;
 	m_type = packetType;
-	m_payload = (unsigned char *)malloc(m_len);
 	m_isEncrypted = false;
+	if (data == NULL)
+	{
+		m_payload = (unsigned char *)malloc(m_mlen);
+	}
+	else
+	{
+		m_payload = (unsigned char *)calloc(m_mlen, 0x1);
+	}
 	memcpy(m_payload, &m_len, sizeof(long));
 	memcpy(m_payload+4, &m_type, sizeof(long));
 	memcpy(m_payload+8, new unsigned long(0x2B1C), sizeof(long)); //magic number for packet header
 	memcpy(m_payload+0xC, new unsigned long(0), sizeof(long)); //placeholder for digest
 	memcpy(m_payload+0x10, new unsigned long(0xFFFFFFFF), sizeof(long)); //packet state. valid values are unknown
-	memcpy(m_payload+0x14, data, dataSize); //append data 
+	if (data != NULL)
+		memcpy(m_payload+0x14, data, dataSize); //append data 
 	makeDigest();
 }
-
-CPacket::CPacket(const void *payload, size_t dataSize, bool isEncrypted)
+void CPacket::UpdateDataAt(unsigned long packetOffset, void *dataBuffer, size_t dataSize)
 {
-        m_len = *(long *)payload; //get payload size from first 4 bytes of payload
-        if (m_len < 4)
+	bool origCryptState = false;
+	if (m_isEncrypted)
+		origCryptState = true;
+	if (origCryptState)
+		Decrypt();
+
+	if ( (packetOffset < 0x14) || (packetOffset+dataSize > (unsigned long)m_len) )
+		return;
+	memcpy(m_payload+packetOffset, dataBuffer, dataSize);
+	makeDigest();
+
+	if (origCryptState)
+		Encrypt();
+}
+CPacket::CPacket(const void *payload, size_t packetSize, bool isEncrypted)
+{
+        m_mlen = m_len = *(long *)payload; //get payload size from first 4 bytes of payload
+        if (m_len < 0x14)
                 return; //error: packet size too small
 		if (m_len > 0x4014)
 				return; //error: too large
-        if (m_len != dataSize)
+        if (m_len != packetSize)
                 return; //error: packet size mismatch
         m_type = *(long *)((unsigned long)payload+4);
-        m_payload = (unsigned char *)malloc(m_len);
+        m_payload = (unsigned char *)malloc(m_mlen);
         memcpy(m_payload, payload, m_len);
         m_isEncrypted = isEncrypted;
 }
