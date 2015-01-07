@@ -1,0 +1,9 @@
+//ebx = packet
+
+p+0x14 < dword 0~7
+p+0x18 < char [15]
+p+0x28 < char [15]
+p+0x38 < dword [7EF980]+115B0*(@esi)+0x34
+p+0x3C < dword [7EF980]+115B0*(@esi)+0x38
+p+0xF4 <
+p+0x100 < byte
