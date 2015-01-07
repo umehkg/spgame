@@ -1,9 +1,46 @@
 //ebx = packet
-
+Summary:
+packetType = 0x4317
+packetSize = 0x114
 p+0x14 < dword 0~7
 p+0x18 < char [15]
 p+0x28 < char [15]
 p+0x38 < dword [7EF980]+115B0*(@esi)+0x34
 p+0x3C < dword [7EF980]+115B0*(@esi)+0x38
-p+0xF4 <
+p+0x49 < char [12]
+p+0x56 < char [12]
+p+0x63 < byte [7EF980]+115B0*(@esi)+0x5F
+p+0x64 < dword [7EF980]+115B0*(@esi)+0x60
+p+0x70 < byte [7EF980]+115B0*(@esi)+0x64
+p+0x78 < dword [7EF980]+115B0*(@esi)+F6FC
+p+0x7C < byte [7EF980]+115B0*(@esi)+0x65
+p+0x80 < dword [7EF980]+115B0*(@esi)+0x70
+p+0x84 < dword [7EF980]+115B0*(@esi)+0x68
+p+0x88 < dword [7EF980]+115B0*(@esi)+0x6C
+p+0x8C < dword 0, <1311~1342 (case 0,1 --> 1, 10,11 --> 2, 20,21 --> 3, 30,31 --> 4)> [7EF980]+115B0*(@esi)+0xB3C
+p+0x90 < dword 0, non-0
+p+0x94 < dword 0, non-0
+p+0x98 < dword 0, non-0
+p+0x9C < [7EF980]+115B0*(@esi)+0xCE4
+p+0xA8 <
+p+0xAC < [7EF980]+115B0*(@esi)+0xDB8
+p+0xB8 <
+p+0xBC < [7EF980]+115B0*(@esi)+0x154C
+p+0xCC < dword sub_473890
+p+0xD0 < dword "
+p+0xD4 < dword "
+p+0xD8 < [7EF980]+115B0*(@esi)+0x1388
+p+0xDC < [7EF980]+115B0*(@esi)+0x138C test p+0xDE = 0
+p+0xE0 < [7EF980]+115B0*(@esi)+0x1390
+p+0xE4 < [7EF980]+115B0*(@esi)+0x1394
+p+0xE8 < [7EF980]+115B0*(@esi)+0x1398
+p+0xEC < [7EF980]+115B0*(@esi)+0x139C
+p+0xF0 < [7EF980]+115B0*(@esi)+0x13A0
+p+0xF4 < dword 0~6 switch
 p+0x100 < byte
+p+0x101 < dword [7EF980]+115B0*(@esi)+0x10288
+p+0x102 < byte [822158]
+p+0x103 < byte [7EF980]+115B0*(@esi)+113B4
+p+0x104 < call dword ptr [[8225A4]+28](5, p+0x104, 0)
+p+0x10C < word movzx [7EF980]+115B0*(@esi)+0x11470 
+p+0x110 < [7EF980]+115B0*(@esi)+0x1384
