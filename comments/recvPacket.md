@@ -133,7 +133,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 .text:006F780D                 add     eax, 0FFFFBCFEh
 .text:006F7812                 cmp     eax, 18Eh       ; switch 399 cases
 ```
-Incomplete listing of Type III: **TCP Packet** <br />
+*Complete* listing of Type III: **TCP Packet** <br />
 - 0x4302: case 0: sub_6DDE30 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4302.txt">+</a> MyInfo
 - 0x4303: case 1: sub_6D8B50 <a href="https://github.com/umehkg/spgame/edit/master/comments/packetType/0x4303.txt">+</a> LobbyPlayerList
 - 0x4304: case 2: sub_6DC770 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4304.txt">+</a> LobbyInfo (rooms)
@@ -150,12 +150,12 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4324: case 34: sub_6F6F30
 - 0x4326: case 36: sub_6D90E0
 - 0x4328: case 38: sub_6D9190
-- case 46: sub_6D91D0
-- case 48: sub_6D9430 
-- case 50: sub_6EA920
-- case 52: sub_6EAC10 
-- case 53: sub_6E0570
-- case 54: sub_6EC0F0
+- 0x4330: case 46: sub_6D91D0
+- 0x4332: case 48: sub_6D9430 
+- 0x4334: case 50: sub_6EA920
+- 0x4336: case 52: sub_6EAC10 
+- 0x4337: case 53: sub_6E0570
+- 0x4338: case 54: sub_6EC0F0
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
 - 0x4341: case 63: sub_6E1980
 - 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
@@ -172,10 +172,76 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4364: case 98: sub_6DCE70
 - 0x4366: case 100: sub_6EA660
 - 0x4368: case 102: sub_6DCEB0  <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4368.txt">$</a> CardShopBuyResult
+- 0x4369: case 103: sub_6DD1F0
+- 0x4371: case 111: sub_6D9DA0 
 - 0x4372: case 112: sub_6E1BC0 ; <"void CGameUserShopResultMsg::Process-1", ".\CClientGameMsg.cpp", "ASSERT Fail,return
 - 0x4373: case 113: sub_6D9A50 ; <"CGameUserShopInfoMsg::Process -0", "CGameUserShopInfoMsg state:%d, id:%s, shop_name:%s", 
+- 0x4376: case 116: sub_6E2460
+- 0x4377: case 117: sub_6DA6A0
+- 0x4378: case 118: sub_6DD260
+- 0x4379: case 119: sub_6E0780
+- 0x4380: case 126: sub_6F7320
+- 0x4381: case 127: sub_6EFAD0
+- 0x4382: case 128: sub_6F0C30  ; <"CGameEnjoyAllDataMsg Rcv Start", "CGameEnjoyAllDataMsg Rcv
+- 0x4384: case 130: sub_6DA7B0
 - 0x4385: case 131: sub_6E25B0  ; <"Software\IOSPK\EVENT", "SPCARD">
+- 0x4387: case 133: sub_6DAAE0
+- 0x4389: case 135: sub_6DABF0
+- 0x4390: case 142: sub_6DD490
+- 0x4391: case 143: sub_6E2BC0
+- 0x4393: case 145: sub_6DD570
+- 0x4395: case 147: sub_6F1F20; <"CGameBigBattleNpcAllMsg Rcv End", "CGameBigBattleNpcAllMsg Rcv Start 3", "CGameBigBattleNpcAllMsg 
+- 0x4397: case 149: sub_6F28F0
+- 0x4399: case 151: sub_6DAD80
+- 0x4403: case 257: sub_6DAF10
+- 0x4404: case 258: sub_6E2D50
+- 0x4405: case 259: sub_6DAFB0
+- 0x4407: case 261: sub_6DD5C0
+- 0x4408: case 262: sub_6F3A90
+- 0x4409: case 263: sub_6DAFD0
+- 0x4410: case 270: sub_6DAFF0
+- 0x4412: case 272: sub_6DB060
+- 0x4414: case 274: sub_6DB140
+- 0x4416: case 276: sub_6DB1F0
+- 0x4418: case 278: sub_6E2DB0
+- 0x4419: case 279: sub_6DB2C0
+- 0x4420: case 286: sub_6E2FC0
+- 0x4422: case 288: sub_6F3C80
+- 0x4423: case 289: sub_6E30B0
+- 0x4425: case 291: sub_6DB4C0
+- 0x4426: case 292: sub_6DB5A0 ; <"CGameMemoArrivalResult::Process TYPE ERROR (%d)">
+- 0x4427: case 293: sub_6DD640 ; <"MAGIC", "Software\IOSPK\EVENT\FREE811\%s">
+- 0x4429: case 295: sub_6E3600
+- 0x4431: case 303: sub_6F3E70 ; <"CGamePetKilledResult PET ARRAY OVER(%d)!!", "C
+- 0x4433: case 305: sub_6DDD40
+- 0x4436: case 308: sub_6E37C0
+- 0x4439: case 311: sub_6E39C0
+- 0x4441: case 319: sub_6DB7F0
+- 0x4442: case 320: sub_6E3A80      ; <".                  .", "Event Error : %d : %d : %d", "MyInfo is NULL %d", "GameState is error
+- 0x4443: <s>case 321: nullsub_5 Nothing</s>
+- 0x4445: case 323: sub_6DB990
+- 0x4447: case 325: sub_6E7E90
+- 0x4448: case 326: sub_6DBCA0
+- 0x4450: case 334: sub_6DBE40 ; <"[ %s ]                   .">
+- 0x4452: case 336: sub_6E7FC0
+- 0x4453: case 337: sub_6DBEF0
+- 0x4455: case 339: sub_6E8050
+- 0x4457: case 341: sub_6DBF80
+- 0x4458: case 342: sub_6E84C0
+- 0x4460: case 350: sub_6DC050
 - 0x4461: case 351: sub_6E8730 ; <"Bonus Visit State Error.", ".\CClientGameMsg.cpp",
+- 0x4463: case 353: sub_6E88C0
+- 0x4465: case 355: sub_6E8990      ; <"/                              .", "/                          .", "'%s
+- 0x4466: case 356: sub_6DC140      ; <"[%s]">
+- 0x4468: case 358: sub_6DC300
+- 0x4470: case 366: sub_6DC3D0
+- 0x4471: case 367: sub_6E90B0
+- 0x4472: case 368: sub_6DC420
+- 0x4473: case 369: sub_6E9800
+- 0x4475: case 371: sub_6EA040
+- 0x4476: case 372: sub_6EA1E0  ; <"CGameBoxNpcCreateMsg::Process ERROR:%d", "CGameBoxNpcCreateMsg::Process NewNPCNode[%d] != HIDE", "CGameBoxNpcCreateMsg::Process NewNPCNode[%d] != BOX_TYP>
+- 0x4477: case 373: sub_6EA470
+- 0x4479: case 375: sub_6E9F00
 - 0x4481: case 383: sub_6DCA20
 - 0x4483: case 385: sub_6DC570
 - 0x4485: case 387: sub_6DC5D0
