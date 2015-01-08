@@ -1,0 +1,15 @@
+[7EE0F8]+0x6C6 must not be 0
+
+//for 8 players..?
+
+pType = 0x4487
+pSize = 0x34
+
+p+0x14 < dword [7EF980]+0x70
+p+0x18 < dword [7EF980]+0x22BD0
+p+0x1C < dword
+p+0x20 < dword
+p+0x24 < dword
+p+0x28 < dword
+p+0x2C < dword
+p+0x30 < dword
