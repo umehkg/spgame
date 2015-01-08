@@ -18,11 +18,11 @@ Summary:
 packetType = 0x2908
 packet+0x14 < word=>dword (movzx) 0~3 dec,values ASSERTed //var1 0=null? 1=beginner 2=hero 3=epic
 packet+0x16 < word=>dword (movzx) 0~39 dec,values ASSERTed //var2
-packet+0x18 < char [15] // channel IP (TCP Type III)
+packet+0x18 < char [16] // channel IP (TCP Type III)
 packet+0x28 < dword // channel port (TCP Type III)
 packet+0x2C < channel population
-packet+0x30 < char [28] //channel name
-packet+0x4D < char [12] //dominating guild name
+packet+0x30 < char [29] //channel name
+packet+0x4D < char [13] //dominating guild name
 packet+0x5A ?? not used
 packet+0x5C < channel max population allowed (default minimum=200)
 packet+0x60 < BYTE guild related??? (bool) (1=cmp w/ playerGuild)
