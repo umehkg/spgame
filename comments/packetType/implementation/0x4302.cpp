@@ -14,11 +14,12 @@ const long long minPointForLevelQword[4] = {3355443200LL, 6710886400LL, 13421772
 //initial values
 
 /* max playerCardCount = 96 */
-long playerCardCount = 4;
+unsigned char playerCardItemExist[] = {1, 1, 1, 1};
+
 long playerCardItemId[] = {1111, 1211, 1311, 1322};
 long playerCardItemDays[] = {1, 1, 1, 1};
 long playerCardItemLevelIdx[] = {3, 4, 7, 8};
-long playerCardItemSkill[] = {36100400, 0, 33200000, 0};
+long playerCardItemSkill[] = {36100300L, 0, 33200000L, 0};
 
 char guildName[13] = "HKGolden";
 char guildTitle[13] = "Developer";
@@ -73,7 +74,7 @@ memcpy(myData+0x94-0x14, &whiteCards[2], 4); //earth
 memcpy(myData+0x98-0x14, &whiteCards[3], 4); //wind
 
 memcpy(myData+0x9C-0x14, &channelFlag, 4); //enterable channel flag
-memcpy(myData+0xA0-0x14, &playerCardCount, 4); //param1 of call sub_473430
+memcpy(myData+0xA0-0x14, &playerCardItemExist[0], sizeof(playerCardItemExist)); //param1 of call sub_473430
 
 memcpy(myData+0x280-0x14, &playerCardItemId[0], 4*sizeof(playerCardItemId)); //param2 of call sub_473430
 memcpy(myData+0x400-0x14, &playerCardItemDays[0], 4*sizeof(playerCardItemDays)); //param3 of call sub_473430
