@@ -66,11 +66,11 @@ packet+0x38 < gained player exp (higher 4 bytes) //8bytes total
 packet+0x3C < gained player exp (lower 4 bytes)
 packet+0x40 < player code (higher 4 bytes) //8bytes total
 packet+0x44 < player code (lower 4 bytes)
-packet+0x48 < char[12] guildName
-packet+0x55 < char[12] guildTitle(job)
-packet+0x62 < ?? not used char[22] //char[10] char[12] ??
-packet+0x78 < char[12] ?? goes to offset ds:810D42 unknown
-packet+0x85 < ?? not used char[11] // char[10] byte ?
+packet+0x48 < char[13] guildName
+packet+0x55 < char[13] guildTitle(job)
+packet+0x62 < ?? not used char[23]
+packet+0x78 < char[13] ?? goes to offset ds:810D42 unknown
+packet+0x85 < ?? not used char[12]
 packet+0x91 < ?? goes to ds:810D5B (dword) //char[10] unknown
 packet+0x95 < ?? goes to ds:810D5F (dword)
 packet+0x99 < ?? goes to ds:810D63 (word)
