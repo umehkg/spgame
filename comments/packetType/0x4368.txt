@@ -1,0 +1,13 @@
+pType = 0x4368
+pSize = 0x698
+
+p+0x14 < dword switch values: 0~10 (0: valid?)
+p+0x18 < byte[96] 0 or non-0 //playerSlotsItemExistence
+p+0x78 < dword[96]
+p+0x1F8 < dword[96]
+p+0x378 < dword[96]
+p+0x4F8 < dword[96]
+p+0x678 < MyInfo->0x1568 //playerSlotCount
+p+0x680 < QWORD MyInfo->sub_477760 //playerCode
+p+0x688 < MyInfo->0xDC8 //playerShopCash
+p+0x690 < QWORD MyInfo->sub_477810 //playerAvatarCoin
