@@ -9,8 +9,8 @@ if ( pRecvPacket->IsValid() ) //check if the packet contains correct header and 
   switch (pRecvType)
   {
     case 0x2707:
-      char loginUsername[13] = *(long *)(pRecvPacket->GetPPtr()+60);
-      char loginPassword[13] = *(long *)(pRecvPacket->GetPPtr()+73);
+      char loginUsername[13] = (char *)(pRecvPacket->GetPPtr()+60);
+      char loginPassword[13] = (char *)(pRecvPacket->GetPPtr()+73);
       break;
     case 0x2911:
       long pRecv_preChar = (long)*(unsigned char *)(pRecvPacket->GetPPtr()+36); //get content in RecvPacket
