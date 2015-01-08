@@ -169,7 +169,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4359: case 87: sub_6EDFA0
 - 0x4361: case 95: sub_6EE9C0
 - 0x4362: case 96: sub_6EF1A0  ; <"CGameQuestAllDataMsg Rcv Start", "CGameQuestAllDataMsg Rcv End"
-- 0x4364: case 98: sub_6DCE70
+- 0x4364: case 98: sub_6DCE70 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4364.txt">$</a> EnterCardShopResponse
 - 0x4366: case 100: sub_6EA660
 - 0x4368: case 102: sub_6DCEB0  <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4368.txt">$</a> CardShopBuyResult
 - 0x4369: case 103: sub_6DD1F0
