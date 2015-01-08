@@ -3,12 +3,12 @@ Summary:
 packetType = 0x4317
 packetSize = 0x114
 p+0x14 < dword 0~7
-p+0x18 < char [15]
-p+0x28 < char [15]
+p+0x18 < char [16]
+p+0x28 < char [16]
 p+0x38 < dword [7EF980]+115B0*(@esi)+0x34
 p+0x3C < dword [7EF980]+115B0*(@esi)+0x38
-p+0x49 < char [12]
-p+0x56 < char [12]
+p+0x49 < char [13]
+p+0x56 < char [13]
 p+0x63 < byte [7EF980]+115B0*(@esi)+0x5F
 p+0x64 < dword [7EF980]+115B0*(@esi)+0x60
 p+0x70 < byte [7EF980]+115B0*(@esi)+0x64
