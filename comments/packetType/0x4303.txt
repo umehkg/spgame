@@ -8,12 +8,12 @@ else
 
 Summary:
 packetType = 0x4303
-packet+0x14 < char *
-packet+0x24 < param1
-packet+0x28 < param2
-packet+0x2C < param3
-packet+0x30 < BYTE param4
+packet+0x14 < char [16] //playerName
+packet+0x24 < param1 //playerLevel
+packet+0x28 < param2 //?
+packet+0x2C < param3 //?
+packet+0x30 < BYTE param4 //playerGender
 packet+0x31 < BYTE 0, 1
-packet+0x34 < param5
-packet+0x38 < param6
+packet+0x34 < param5 //?
+packet+0x38 < param6 //playerMissionLvl
 packetSize = 0x3C 
