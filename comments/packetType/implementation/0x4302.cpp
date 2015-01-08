@@ -16,8 +16,8 @@ const long minPointForLevelDword[29] = {-5L, 1L, 50L, 100L,
                                     1677721600L};
 const long long minPointForLevelQword[4] = {3355443200LL, 6710886400LL, 13421772800LL, 26843545600LL};
 //initial values
-char guildName[12] = "HKGolden";
-char guildTitle[12] = "Developer";
+char guildName[13] = "HKGolden";
+char guildTitle[13] = "Developer";
 long long playerCode = 0;
 long long playerPoint = 0;
 long playerLevel = 0;
