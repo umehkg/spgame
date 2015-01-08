@@ -9,4 +9,6 @@ public:
 	CRecvPacket(void *recvBuffer, size_t packetSize);
 	~CRecvPacket(void);
 	unsigned char *GetPPtr();
+	bool IsValid();
 };
+
