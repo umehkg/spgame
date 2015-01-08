@@ -5,22 +5,22 @@ packetSize = 0x114
 p+0x14 < dword 0~7
 p+0x18 < char [16]
 p+0x28 < char [16]
-p+0x38 < dword [7EF980]+115B0*(@esi)+0x34
-p+0x3C < dword [7EF980]+115B0*(@esi)+0x38
+p+0x38 < dword [7EF980]+115B0*(@esi)+0x34 //playerLevel
+p+0x3C < char [13] dword [7EF980]+115B0*(@esi)+0x38 //playerName (append?)
 p+0x49 < char [13]
 p+0x56 < char [13]
 p+0x63 < byte [7EF980]+115B0*(@esi)+0x5F
-p+0x64 < dword [7EF980]+115B0*(@esi)+0x60
+p+0x64 < dword [7EF980]+115B0*(@esi)+0x60 //
 p+0x70 < byte [7EF980]+115B0*(@esi)+0x64
-p+0x78 < dword [7EF980]+115B0*(@esi)+F6FC
-p+0x7C < byte [7EF980]+115B0*(@esi)+0x65
-p+0x80 < dword [7EF980]+115B0*(@esi)+0x70
+p+0x78 < dword [7EF980]+115B0*(@esi)+F6FC //
+p+0x7C < byte [7EF980]+115B0*(@esi)+0x65 //
+p+0x80 < dword [7EF980]+115B0*(@esi)+0x70 //
 p+0x84 < dword [7EF980]+115B0*(@esi)+0x68
-p+0x88 < dword [7EF980]+115B0*(@esi)+0x6C
+p+0x88 < dword [7EF980]+115B0*(@esi)+0x6C //
 p+0x8C < dword 0, <1311~1342 (case 0,1 --> 1, 10,11 --> 2, 20,21 --> 3, 30,31 --> 4)> [7EF980]+115B0*(@esi)+0xB3C
-p+0x90 < dword 0, non-0
-p+0x94 < dword 0, non-0
-p+0x98 < dword 0, non-0
+p+0x90 < dword 0, non-0 call sub_403560
+p+0x94 < dword 0, non-0 //
+p+0x98 < dword 0, non-0 //
 p+0x9C < [7EF980]+115B0*(@esi)+0xCE4
 p+0xA8 <
 p+0xAC < [7EF980]+115B0*(@esi)+0xDB8
