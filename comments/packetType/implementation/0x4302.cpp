@@ -3,21 +3,22 @@ unsigned char myData1[0x978];
 char *myData = (char *)calloc(0x978-0x14, 0x1);
 //const
 const long minPointForLevelDword[29] = {-5L, 1L, 50L, 100L,
-									200L, 400L, 800L, 1600L,
-									2400L, 3200L, 6400L, 12800L,
-									25600L, 51200L, 102400L, 204800L,
-									409600L, 819200L, 1638400L, 3276800L,
-									6553600L, 13107200L, 26214400L, 52428800L,
-									104857600L, 209715200L, 419430400L, 838860800L,
-									1677721600L};
+					200L, 400L, 800L, 1600L,
+					2400L, 3200L, 6400L, 12800L,
+					25600L, 51200L, 102400L, 204800L,
+					409600L, 819200L, 1638400L, 3276800L,
+					6553600L, 13107200L, 26214400L, 52428800L,
+					104857600L, 209715200L, 419430400L, 838860800L,
+					1677721600L};
 const long long minPointForLevelQword[4] = {3355443200LL, 6710886400LL, 13421772800LL, 26843545600LL};
 //initial values
 
-long playerCardCount = 1;
-long playerCardItemId[2] = {5001, 1311};
-long playerCardItemDays[2] = {1, 2};
-long playerCardItemLevelIdx[2] = {3, 4};
-long playerCardAttribArr3[2] = {0, 0};
+/* max playerCardCount = 96 */
+long playerCardCount = 4;
+long playerCardItemId[] = {1111, 1211, 1311, 1322};
+long playerCardItemDays[] = {1, 1, 1, 1};
+long playerCardItemLevelIdx[] = {3, 4, 7, 8};
+long playerCardItemSkill[] = {36100400, 0, 33200000, 0};
 
 char guildName[13] = "HKGolden";
 char guildTitle[13] = "Developer";
@@ -77,7 +78,7 @@ memcpy(myData+0xA0-0x14, &playerCardCount, 4); //param1 of call sub_473430
 memcpy(myData+0x280-0x14, &playerCardItemId[0], 4*sizeof(playerCardItemId)); //param2 of call sub_473430
 memcpy(myData+0x400-0x14, &playerCardItemDays[0], 4*sizeof(playerCardItemDays)); //param3 of call sub_473430
 memcpy(myData+0x580-0x14, &playerCardItemLevelIdx[0], 4*sizeof(playerCardItemLevelIdx)); //param4 of call sub_473430
-memcpy(myData+0x700-0x14, &playerCardAttribArr3[0], 4*sizeof(playerCardAttribArr3)); //param5 of call sub_473430
+memcpy(myData+0x700-0x14, &playerCardItemSkill[0], 4*sizeof(playerCardItemSkill)); //param5 of call sub_473430
 
 memcpy(myData+0x880-0x14, &playerInventorySlots, 4);
 
