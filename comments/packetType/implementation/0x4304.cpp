@@ -2,7 +2,7 @@
 	char *myData = (char *)calloc(0xB0-0x14, 0x1);
 	//knowns
 	long roomIdx = 0;
-	char roomName [28] = "HKGoldenTest";
+	char roomName [29] = "HKGoldenTest";
 	long roomType = 20;
 	long roomMap = 20;
 	long roomMaxPlayers = 8;
@@ -16,7 +16,7 @@
 	long cardRestriction = -1; //no restriction: -1
 	//unknowns
 	unsigned char unk1 = false;
-	char unk2[12] = "";
+	char unk2[13] = "";
 	unsigned char unk3 = false;
 	unsigned char unk4 = false;
 	unsigned char unk5 = false;
