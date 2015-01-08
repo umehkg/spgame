@@ -27,3 +27,8 @@ unsigned char *CRecvPacket::GetPPtr()
 {
 	return m_payload;
 }
+
+bool CRecvPacket::IsValid()
+{
+	return m_isValid;
+}
