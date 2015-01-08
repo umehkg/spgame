@@ -1,7 +1,7 @@
 /* sendPacket 0x4368 - response to packetType 0x4367 */
 unsigned char myData1[0x698];
 char *myData = (char *)calloc(0x698-0x14, 0x1);
-unsigned long shopResult = 0;
+unsigned long shopResult = 1;
 long long playerCode = 123000;
 long long playerCash = 456789;
 long long playerAvatarCoin = 2015;
