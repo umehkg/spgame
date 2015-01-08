@@ -146,7 +146,7 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4317: case 21: sub_6F3F60 EnterRoom
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
 - 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
-- 0x4368: case 102: sub_6DCEB0 +
+- 0x4368: case 102: sub_6DCEB0  <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4368.txt">$</a> CardShopBuyResult
 - 0x4372: case 112: sub_6E1BC0 ; <"void CGameUserShopResultMsg::Process-1", ".\CClientGameMsg.cpp", "ASSERT Fail,return
 - 0x4373: case 113: sub_6D9A50 ; <"CGameUserShopInfoMsg::Process -0", "CGameUserShopInfoMsg state:%d, id:%s, shop_name:%s", 
 - 0x4385: case 131: sub_6E25B0  ; <"Software\IOSPK\EVENT", "SPCARD">
@@ -154,6 +154,6 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4481: case 383: sub_6DCA20
 - 0x4483: case 385: sub_6DC570
 - 0x4485: case 387: sub_6DC5D0
-- 0x4487: case 389: sub_6DC6D0
+- 0x4487: case 389: sub_6DC6D0 +
 - 0x4488: case 390: sub_6DC700
 - 0x4490: case 398: sub_6EA540 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4490.txt">+</a>
