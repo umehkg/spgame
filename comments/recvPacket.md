@@ -144,8 +144,33 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4312: case 16: sub_6DCC50 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4312.txt">+</a> ; RoomInfoWnd <"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
 - 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
 - 0x4317: case 21: sub_6F3F60 EnterRoom
+- 0x4319: case 23: sub_6DF0A0
+- 0x4321: case 31: sub_6DF700
+- 0x4323: case 33: sub_6DF900
+- 0x4324: case 34: sub_6F6F30
+- 0x4326: case 36: sub_6D90E0
+- 0x4328: case 38: sub_6D9190
+- case 46: sub_6D91D0
+- case 48: sub_6D9430 
+- case 50: sub_6EA920
+- case 52: sub_6EAC10 
+- case 53: sub_6E0570
+- case 54: sub_6EC0F0
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
+- 0x4341: case 63: sub_6E1980
 - 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
+- 0x4345: case 67: sub_6E0E30
+- 0x4346: case 68: sub_6E11A0
+- 0x4347: case 69: sub_6E1A90
+- 0x4349: case 71: sub_6E1F50
+- 0x4352: case 80: sub_6DA2F0
+- 0x4354: case 82: sub_6DA490
+- 0x4356: case 84: sub_6DA580
+- 0x4359: case 87: sub_6EDFA0
+- 0x4361: case 95: sub_6EE9C0
+- 0x4362: case 96: sub_6EF1A0  ; <"CGameQuestAllDataMsg Rcv Start", "CGameQuestAllDataMsg Rcv End"
+- 0x4364: case 98: sub_6DCE70
+- 0x4366: case 100: sub_6EA660
 - 0x4368: case 102: sub_6DCEB0  <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4368.txt">$</a> CardShopBuyResult
 - 0x4372: case 112: sub_6E1BC0 ; <"void CGameUserShopResultMsg::Process-1", ".\CClientGameMsg.cpp", "ASSERT Fail,return
 - 0x4373: case 113: sub_6D9A50 ; <"CGameUserShopInfoMsg::Process -0", "CGameUserShopInfoMsg state:%d, id:%s, shop_name:%s", 
