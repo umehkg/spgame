@@ -143,7 +143,7 @@ Incomplete listing of Type III: **TCP Packet** <br />
 - 0x4310: case 14: sub_6D8D40 MessageWnd/UserInfoWnd //cmp playerUsername
 - 0x4312: case 16: sub_6DCC50 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4312.txt">+</a> ; RoomInfoWnd <"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
 - 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
-- 0x4317: case 21: sub_6F3F60 ; <">> Guild conditions has been canceled. <<", ".\CClientGameMsg.cpp"
+- 0x4317: case 21: sub_6F3F60 EnterRoom
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
 - 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
 - 0x4372: case 112: sub_6E1BC0 ; <"void CGameUserShopResultMsg::Process-1", ".\CClientGameMsg.cpp", "ASSERT Fail,return
