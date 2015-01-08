@@ -1,11 +1,6 @@
 	//declarations
 unsigned char myData1[0x978];
 char *myData = (char *)calloc(0x978-0x14, 0x1);
-long playerCardCount = 2;
-long *playerCardAttribPtr0 = (long *)calloc(96, 4);
-long *playerCardAttribPtr1 = (long *)calloc(96, 4);
-long *playerCardAttribPtr2 = (long *)calloc(96, 4);
-long *playerCardAttribPtr3 = (long *)calloc(96, 4);
 //const
 const long minPointForLevelDword[29] = {-5L, 1L, 50L, 100L,
 									200L, 400L, 800L, 1600L,
@@ -17,24 +12,21 @@ const long minPointForLevelDword[29] = {-5L, 1L, 50L, 100L,
 									1677721600L};
 const long long minPointForLevelQword[4] = {3355443200LL, 6710886400LL, 13421772800LL, 26843545600LL};
 //initial values
-long playerCardAttribArr0[2] = {5001, 1311};
-long playerCardAttribArr1[2] = {1, 2};
-long playerCardAttribArr2[2] = {3, 4};
-long playerCardAttribArr3[2] = {5, 6};
-memcpy(playerCardAttribPtr0, &playerCardAttribArr0[0], 2*4);
-memcpy(playerCardAttribPtr1, &playerCardAttribArr1[0], 2*4);
-memcpy(playerCardAttribPtr2, &playerCardAttribArr2[0], 2*4);
-memcpy(playerCardAttribPtr3, &playerCardAttribArr3[0], 2*4);
 
+long playerCardCount = 1;
+long playerCardItemId[2] = {5001, 1311};
+long playerCardItemDays[2] = {1, 2};
+long playerCardItemLevelIdx[2] = {3, 4};
+long playerCardAttribArr3[2] = {0, 0};
 
 char guildName[13] = "HKGolden";
 char guildTitle[13] = "Developer";
-long long playerCode = 0;
-long long playerPoint = 0;
-long playerLevel = 0;
-long playerInventorySlots = 12;
+long long playerCode = 1234567;
+long long playerPoint = 7654321;
+long playerLevel = 30;
+long playerInventorySlots = 18;
 long playerType = 1; //set to 7 for GM...
-long whiteCards[4] = {0, 0, 0, 0};
+long whiteCards[4] = {10, 20, 30, 40};
 long scrolls[3] = {0, 0, 0};
 long playerWins = 0;
 long playerLoses = 0;
@@ -82,10 +74,10 @@ memcpy(myData+0x98-0x14, &whiteCards[3], 4); //wind
 memcpy(myData+0x9C-0x14, &channelFlag, 4); //enterable channel flag
 memcpy(myData+0xA0-0x14, &playerCardCount, 4); //param1 of call sub_473430
 
-memcpy(myData+0x280-0x14, playerCardAttribPtr0, 4*96); //param2 of call sub_473430
-memcpy(myData+0x400-0x14, playerCardAttribPtr1, 4*96); //param3 of call sub_473430
-memcpy(myData+0x580-0x14, playerCardAttribPtr2, 4*96); //param4 of call sub_473430
-memcpy(myData+0x700-0x14, playerCardAttribPtr3, 4*96); //param5 of call sub_473430
+memcpy(myData+0x280-0x14, &playerCardItemId[0], 4*sizeof(playerCardItemId)); //param2 of call sub_473430
+memcpy(myData+0x400-0x14, &playerCardItemDays[0], 4*sizeof(playerCardItemDays)); //param3 of call sub_473430
+memcpy(myData+0x580-0x14, &playerCardItemLevelIdx[0], 4*sizeof(playerCardItemLevelIdx)); //param4 of call sub_473430
+memcpy(myData+0x700-0x14, &playerCardAttribArr3[0], 4*sizeof(playerCardAttribArr3)); //param5 of call sub_473430
 
 memcpy(myData+0x880-0x14, &playerInventorySlots, 4);
 
