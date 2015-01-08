@@ -1,5 +1,9 @@
 Comments
 =====
+8 Jan 2015
+-----
+- Off-by-one errors... char array[x] x represents memory size (inclusive of null-termination byte) already
+
 29 Dec 2014
 -----
 - Future tests must be based on Lobby Server (Type III).
