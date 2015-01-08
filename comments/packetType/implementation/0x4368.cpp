@@ -1,5 +1,5 @@
 /* sendPacket 0x4368 - response to packetType 0x4367 */
-unsigned char myData[0x698];
+unsigned char myData1[0x698];
 char *myData = (char *)calloc(0x698-0x14, 0x1);
 unsigned long shopResult = 0;
 long long playerCode = 123000;
@@ -7,10 +7,10 @@ long long playerCash = 456789;
 long long playerAvatarCoin = 2015;
 long playerSlotCount = 12;
 unsigned char inventoryItemExist[4] = {1, 1, 1, 1};
-unsigned char inventoryItemId[4] = {1111, 1112, 1113, 1114};
-unsigned char inventoryItemDays[4] = {0, 30, 90, 365};
-unsigned char inventoryItemLevelIdx[4] = {0, 4, 7, 8};
-unsigned char inventoryItemSk2Type[4] = {0, 400, 401, 402};
+long inventoryItemId[4] = {1111, 1112, 1113, 1114};
+long inventoryItemDays[4] = {0, 30, 90, 365};
+long inventoryItemLevelIdx[4] = {0, 4, 7, 8};
+long inventoryItemSk2Type[4] = {0, 400, 401, 402};
 memcpy(myData+0x14-0x14, &shopResult, 4);
 memcpy(myData+0x18-0x14, &inventoryItemExist[0], sizeof(inventoryItemExist));
 memcpy(myData+0x78-0x14, &inventoryItemId[0], sizeof(inventoryItemId));
