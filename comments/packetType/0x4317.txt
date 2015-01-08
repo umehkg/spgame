@@ -39,7 +39,7 @@ p+0xF0 < [7EF980]+115B0*(@esi)+0x13A0
 p+0xF4 < dword 0~6 switch
 p+0x100 < byte
 p+0x101 < dword [7EF980]+115B0*(@esi)+0x10288
-p+0x102 < byte [822158]
+p+0x102 < byte [822158] //premium room
 p+0x103 < byte [7EF980]+115B0*(@esi)+113B4
 p+0x104 < call dword ptr [[8225A4]+28](5, p+0x104, 0)
 p+0x10C < word movzx [7EF980]+115B0*(@esi)+0x11470 
