@@ -1,0 +1,4 @@
+pType = 0x4364
+pSize = 0x18
+
+p+0x14 < dword playerCash
