@@ -23,10 +23,18 @@ if( *(long*)&decryptBuff[4] == 0x4309)
   long playerEquipItemId[4] = {1311, 1111, 1211, 5001};
   long playerEquipItemDays[4] = {1, 2, 3, 6000};
   long playerEquipItemLevelIdx[4] = {3, 2, 1, 0};
-  long playerEquipItemSk2Type[4] = {400, 0, 0, 0};
+  long playerEquipItemSkill[4] = {0, 0, 0, 0};
   long playerAvatarEquipItemId[14] = {4101, 4201, 4301, 4401, 4501, 4601, 4701,
-										0, 0, 0, 0, 0, 0, 0
-									};
+					0, 0, 0, 0, 0, 0, 0
+					};
+
+  short playerEquipMagicSkill[3] = {0, 0, 0};
+  short playerEquipWeaponSkill[3] = {100, 300, 36};
+  short playerEquipBodySkill[3] = {0, 0, 0};
+
+  playerEquipItemSkill[0] = playerEquipMagicSkill[0]*1000000L+playerEquipMagicSkill[1]*1000+playerEquipMagicSkill[2];
+  playerEquipItemSkill[1] = playerEquipWeaponSkill[0]*1000000L+playerEquipWeaponSkill[1]*1000+playerEquipWeaponSkill[2];
+  playerEquipItemSkill[2] = playerEquipBodySkill[0]*1000000L+playerEquipBodySkill[1]*1000+playerEquipBodySkill[2];
   
   memcpy(myData+0x14-0x14, new unsigned char(1), 1); //1 = UserInfoWnd
   memcpy(myData+0x15-0x14, &decryptBuff[0x18], 15);
@@ -45,7 +53,7 @@ if( *(long*)&decryptBuff[4] == 0x4309)
   memcpy(myData+0x70-0x14, &playerEquipItemId[0], 4*4); 
   memcpy(myData+0x80-0x14, &playerEquipItemDays[0], 4*4); 
   memcpy(myData+0x90-0x14, &playerEquipItemLevelIdx[0], 4*4); 
-  memcpy(myData+0xA0-0x14, &playerEquipItemSk2Type[0], 4*4); 
+  memcpy(myData+0xA0-0x14, &playerEquipItemSkill, 4*4); 
   memcpy(myData+0xB0-0x14, &playerMissionLevel, 4); 
   memcpy(myData+0xB4-0x14, &playerAvatarEquipItemId[0], 14*4); 
   memcpy(myData+0xEC-0x14, new long(0), 4); 
