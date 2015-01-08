@@ -1,7 +1,7 @@
 pType = 0x4368
 pSize = 0x698
 
-p+0x14 < dword switch values: 0~10 (0: valid?)
+p+0x14 < dword switch values: 1~11 (1: valid, others=??)
 p+0x18 < byte[96] 0 or non-0 //playerSlotsItemExistence
 p+0x78 < dword[96]
 p+0x1F8 < dword[96]
