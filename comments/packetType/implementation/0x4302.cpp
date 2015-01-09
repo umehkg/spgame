@@ -86,6 +86,8 @@ memcpy(myData+0x880-0x14, &playerInventorySlots, 4);
 memcpy(myData+0x884-0x14, &minPointForLevelDword[0], 4*29);
 memcpy(myData+0x8F8-0x14, &minPointForLevelQword[0], 4*8);
 
+memcpy(myData+0x918-0x14, new long(sizeof(playerCardItemExist)), 4);
+
 memcpy(myData+0x94C-0x14, &lobbyMaxRooms, 4);
 memcpy(myData+0x974-0x14, &playerType, 4);
 
