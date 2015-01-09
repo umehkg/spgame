@@ -1,0 +1,10 @@
+sub_46A5F0 (p+0x14, p+0x24, p+0x28); //; <"Guild Mark Lock Fail!">
+
+sizeof(p+0x28) = 0x4E
+
+
+pType = 0x2922
+pSize = 0x76
+
+
+
