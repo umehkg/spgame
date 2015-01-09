@@ -1,4 +1,4 @@
-if( *(long*)&decryptBuff[4] == 0x4329)
+if( *(long*)&decryptBuff[4] == 0x4367)
 {
     long buyItemId = *(long *)&decryptBuff[0x18];
     long buyItemDays = *(long *)&decryptBuff[0x1C];
