@@ -1,0 +1,9 @@
+pType = 0x4330
+pSize = 0x30
+
+p+0x18 < dword 0,1,2 case (0:valid)
+p+0x28 < QWORD playerCode
+
+p+0x14 < dword
+p+0x1C < dword
+p+0x20 < dword
