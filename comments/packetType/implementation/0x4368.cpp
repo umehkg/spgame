@@ -33,4 +33,5 @@ if( *(long*)&decryptBuff[4] == 0x4367)
     CPacket *myPacket = new CPacket(0x4368, myData, 0x698-0x14);
     myPacket->Encrypt();
     myPacket->Output((char*)myData1, 0x698);
+    WriteComm1((char*)myData1, myPacket->GetSize(), dwTimeout);
 }
