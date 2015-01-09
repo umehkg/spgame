@@ -1,10 +1,10 @@
-if( *(long*)&decryptBuff[4] == 0x4367)
+if( *(long*)&decryptBuff[4] == 0x4329)
 {
-    long buyItemId = &decryptBuff[0x18];
-    long buyItemDays = &decryptBuff[0x1C];
-    long buyItemLevelIdx = &decryptBuff[0x20];
-    long buyItemSkill = &decryptBuff[0x24];
-    long unk1 = &decryptBuff[0x28];
+    long buyItemId = *(long *)&decryptBuff[0x18];
+    long buyItemDays = *(long *)&decryptBuff[0x1C];
+    long buyItemLevelIdx = *(long *)&decryptBuff[0x20];
+    long buyItemSkill = *(long *)&decryptBuff[0x24];
+    long unk1 = *(long *)&decryptBuff[0x28];
     /* sendPacket 0x4368 - response to packetType 0x4367 */
     unsigned char myData1[0x698];
     char *myData = (char *)calloc(0x698-0x14, 0x1);
@@ -25,7 +25,7 @@ if( *(long*)&decryptBuff[4] == 0x4367)
     memcpy(myData+0x78-0x14, &inventoryItemId[0], sizeof(inventoryItemId));
     memcpy(myData+0x1F8-0x14, &inventoryItemDays[0], sizeof(inventoryItemDays));
     memcpy(myData+0x378-0x14, &inventoryItemLevelIdx[0], sizeof(inventoryItemLevelIdx));
-    memcpy(myData+0x4F8-0x14, &inventoryItemSk2Type[0], sizeof(inventoryItemSk2Type));
+    memcpy(myData+0x4F8-0x14, &inventoryItemSkill[0], sizeof(inventoryItemSkill));
     memcpy(myData+0x678-0x14, &playerSlotCount, 4);
     memcpy(myData+0x680-0x14, &playerCode, 8);
     memcpy(myData+0x688-0x14, &playerCash, 4);
