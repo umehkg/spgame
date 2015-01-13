@@ -3,6 +3,14 @@
 
 CRecvPacket::CRecvPacket(void *recvBuffer, size_t packetSize)
 {
+	/* Constructor code of CPacket
+	m_mlen = 0;
+	m_len = 0;
+	m_payload = NULL;
+	m_isEncrypted = false;
+	*/
+
+	//extra constructor code
 	m_isEncrypted = true;
 	m_len = *(long *)recvBuffer;
 	if ( (m_len < 0x14)||(m_len > 0x4014) )
@@ -10,22 +18,18 @@ CRecvPacket::CRecvPacket(void *recvBuffer, size_t packetSize)
 		m_isValid = false;
 		return;
 	}
-	m_payload = (unsigned char *)malloc(m_len);
+	m_payload = new unsigned char [m_len];
 	memcpy(m_payload, recvBuffer, m_len);
 	Decrypt();
-	m_type = *(unsigned long *)(m_payload+4);
+	m_type = *(long *)&m_payload[4];
 	m_isValid = CheckPacket();
 }
 
 
 CRecvPacket::~CRecvPacket(void)
 {
-	free(m_payload);
-}
-
-unsigned char *CRecvPacket::GetPPtr()
-{
-	return m_payload;
+	//calls the CPacket destructor
+	//no extra destructor code needed here
 }
 
 bool CRecvPacket::IsValid()
