@@ -77,7 +77,7 @@ else
 
 5 . update user data		
 ```SQL
-UDPATE db_users SET char_cash, char_code VALUES (_char_cash, _char_code) WHERE username = "username"
+UDPATE db_users SET char_cash=_char_cash, char_code=_char_code WHERE username = "username"
 ```
 6 . update user inventory
 //N.B. make sure item_level and item_skill are defaulted to zero!
