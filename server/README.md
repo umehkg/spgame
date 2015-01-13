@@ -1,30 +1,18 @@
 How to use RecvPacket class:
 
 ```C++
-CRecvPacket pRecvPacket = new CRecvPacket(recvBuff, dwBytes); //packet is decrypted on construction
-long pRecvType = pRecvPacket->GetType(); //get packetType (p+0x4)
-size_t pRecvSize = pRecvPacket->GetSize();
+	char testData[] = "\x98\x00\x00\x00\xfd\xe5\xff\xff\x1f\xa6\xff\xff\x25\x4b\x90\xca\x4c\x33\xc3\xf5\xcc\x64\x5c\x66\x7e\x4e\x7e\x66\xff\x46\xfd\xff\x91\xa2\x2a\x19\xcf\xff\xff\xff\xc5\x9c\x84\xec\xd4\x6c\xb4\x2c\xff\x00\x6f\xff\x4f\xbb\xf5\x0c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff\xee\xfe\xbd\xef\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1d\x18\x6f\xff";
+	
+	//using CRecvPacket class
+	CRecvPacket *pRecvPacket = new CRecvPacket(testData, sizeof(testData)-1);
+	printf("0x%.4X 0x%.4X \n", *(long *)(&pRecvPacket->Payload()[4]), pRecvPacket->GetType());
+	delete pRecvPacket;
 
-if ( pRecvPacket->IsValid() ) //check if the packet contains correct header and checksum
-  switch (pRecvType)
-  {
-    case 0x2707:
-      char loginUsername[13] = (char *)(pRecvPacket->GetPPtr()+60);
-      char loginPassword[13] = (char *)(pRecvPacket->GetPPtr()+73);
-      break;
-    case 0x2911:
-      long pRecv_preChar = (long)*(unsigned char *)(pRecvPacket->GetPPtr()+36); //get content in RecvPacket
-          //the data:
-      		unsigned char *myData = (unsigned char*)calloc(0x20-0x14, 0x1);
-    			memcpy(myData+0x14-0x14, new short(1), 2); //must be 01 00 00 00
-    			memcpy(myData+0x18-0x14, &pRecv_preChar, 4);//character 10,20,30...etc
-    			//construct packet to send
-    			CPacket *myPacket = new CPacket(0x2912, myData, 0x20-0x14);
-    			myPacket->Encrypt();
-    			myPacket->Output(myData, myPacket->GetSize());
-    			    WriteComm1((char*)myData, myPacket->GetSize(), dwTimeout);
-    			free(myData); //free the data buffer, not used afterwards
-      break;
-    default:
-  }
+  //doing the same thing with CPacket class
+	CPacket *pPacket = new CPacket(testData, sizeof(testData)-1, true);
+	pPacket->Decrypt();
+	printf("0x%.4X 0x%.4X \n", *(long *)(&pPacket->Payload()[4]), pPacket->GetType());
+	delete pPacket;
+	
+	return 0;
 ```
