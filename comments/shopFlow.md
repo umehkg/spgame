@@ -1,3 +1,16 @@
+[Shop Schema]
+```SQL
+CREATE TABLE db_shop
+     (
+     id int auto_increment primary key, 
+     item_id SMALLINT(4),
+     item_days SMALLINT(3),
+     cost_cash INT, 
+     cost_code INT
+    );
+```
+
+
 [Shop Flow]
 
 1 . Get the shop data
