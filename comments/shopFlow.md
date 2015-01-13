@@ -1,12 +1,13 @@
 [Shop Flow]
 
-1. Get the shop data
+1 . Get the shop data
+
 ```SQL
 SELECT cost_cash, cost_code FROM db_shop WHERE item_id = xxx AND item_days = yyy
 ```
 if no rows, then abort
 
-2. Determine item cost is cash or code
+2 . Determine item cost is cash or code
 ```C++
 bool isCashItem;
 long itemCost;
@@ -15,8 +16,9 @@ while ()
   isCashItem = row[0] > 0 ;
   itemCost = isCashItem ? row[0] : row[1];
 }
+```
 
-3. Get user inventory data
+3 . Get user inventory data
 ```SQL
 SELECT item_pos FROM db_items WHERE item_owner = "username"
 ```
@@ -41,7 +43,7 @@ if item_len > 96, abort
 			}
 		}
 ```
-4. get user data
+4 . get user data
 ```SQL
 SELECT char_cash, char_code FROM db_users WHERE username = "username"
 ```
@@ -60,13 +62,13 @@ else
 		_char_code -= itemCost;
 ```
 
-5. update user data		
+5 . update user data		
 ```SQL
 UDPATE db_users SET char_cash, char_code VALUES (_char_cash, _char_code) WHERE username = "username"
 ```
-6. update user inventory
+6 . update user inventory
 //N.B. make sure item_level and item_skill are defaulted to zero!
 ```SQL
 INSERT INTO db_items (item_id, item_days, item_pos, item_owner) VALUES (_item_id, _item_days, new_item_pos, "username")
 ```
-7.Done
+7 .Done
