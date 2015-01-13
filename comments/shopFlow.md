@@ -1,12 +1,13 @@
 [Shop Flow]
 
 1. Get the shop data
-```
+```SQL
 SELECT cost_cash, cost_code FROM db_shop WHERE item_id = xxx AND item_days = yyy
 ```
 if no rows, then abort
 
 2. Determine item cost is cash or code
+```C++
 bool isCashItem;
 long itemCost;
 while ()
@@ -16,7 +17,7 @@ while ()
 }
 
 3. Get user inventory data
-```
+```SQL
 SELECT item_pos FROM db_items WHERE item_owner = "username"
 ```
 
@@ -46,6 +47,7 @@ SELECT char_cash, char_code FROM db_users WHERE username = "username"
 ```
 test if sufficient cash/code...
 
+```C++
 if (isCashItem)
 	if (_char_cash < itemCost)
 		abort;
@@ -56,6 +58,7 @@ else
 		abort;
 	else
 		_char_code -= itemCost;
+```
 
 5. update user data		
 ```SQL
