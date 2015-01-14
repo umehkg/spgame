@@ -53,7 +53,7 @@ packet+0x880 < //+1568 player inventory slot count
 packet+0x884 < //higher 4 bytes : +1460~+1548 lower 4 bytes: from p+0x938 EXP for each lvl
 ...
 packet+0x8F8~+0x914 < //DWORD +1548~+1564 EXP for each lvl (29/+)
-packet+0x918 < //+2D9C
+packet+0x918 < //+2D9C entered channel flag 1:beginner 2:hero 3:epic N.B. 0:disable buttons!!
 packet+0x928 < switch 0~4 inclusive //+2E0C
 packet+0x92C < switch 1~4 inclusive //+2E10
 packet+0x930 < //+2E14
