@@ -1,15 +1,29 @@
+0x4342:
+p+0x14: item_pos
+p+0x18: operation 1:level fusion 2: skill fusion
+
 pSize = 0x58
 pType = 0x4343
 
-p+0x14 <
-p+0x18 <
-p+0x1C < case 7,8,9,4 (4:valid ?),1
-p+0x20 <
-p+0x24 <
+p+0x14 < item_pos
+
+p+0x1C < case 7,8,9,4 ),1:valid?, 5
+^ 
+1: Level up fusion successful
+5: Skill up fusion successful
+else: OK silent mode
+4: korean msg
+7: Can't combine items in the chatting window
+8: Cannot fuse PC room cards
+9: Current event has been exited so there is not enough Codes
+p+0x20 < new item_levelIdx
+p+0x24 < new item_skill
 p+0x28 <
 p+0x2C <
 p+0x30 <
-p+0x34 < FusionResult: 3,4,5,6,7,8,9,else,1
+p+0x34 < FusionResult: 3,4,5,6,7,8,9,else,1 //use of fusion cards
+^
+
 p+0x38 <
 
 p+0x40 < QWORD new playerCode
