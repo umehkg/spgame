@@ -4,6 +4,7 @@ Comments
 -----
 - Heap Errors fixed by correcting the bounds
 - call sub_401A10 is display Announcement Wnd
+- CreateFunction sub_626C60 <"ioXMLDocument::CreateInstance - FAILED(%x)", "Msxml2.DOMDocument.4.0">
 
 8 Jan 2015
 -----
