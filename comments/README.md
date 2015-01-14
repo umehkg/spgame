@@ -1,5 +1,10 @@
 Comments
 =====
+14 Jan 2015
+-----
+- Heap Errors fixed by correcting the bounds
+- call sub_401A10 is display Announcement Wnd
+
 8 Jan 2015
 -----
 - Off-by-one errors... char array[x] x represents memory size (inclusive of null-termination byte) already
