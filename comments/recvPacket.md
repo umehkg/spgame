@@ -233,7 +233,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4463: case 353: sub_6E88C0
 - 0x4465: case 355: sub_6E8990      ; <"/                              .", "/                          .", "'%s
 - 0x4466: case 356: sub_6DC140      ; <"[%s]">
-- 0x4468: case 358: sub_6DC300 CardSlotExtend Apply Response (?
+- 0x4468: case 358: sub_6DC300 $ CardSlotExtend Apply Response (?
 - 0x4470: case 366: sub_6DC3D0
 - 0x4471: case 367: sub_6E90B0
 - 0x4472: case 368: sub_6DC420
