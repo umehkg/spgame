@@ -158,7 +158,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4338: case 54: sub_6EC0F0
 - 0x4340: case 62: sub_6ED420 GameState == 4 ? confirm, playerName
 - 0x4341: case 63: sub_6E1980
-- 0x4343: case 65: sub_6E0A50 ; <".\CClientGameMsg.cpp", "ASSERT Fail,return", "Fusion Result : %d">
+- 0x4343: case 65: sub_6E0A50 + CardFusion StartFusion Response "Fusion Result : %d">
 - 0x4345: case 67: sub_6E0E30
 - 0x4346: case 68: sub_6E11A0
 - 0x4347: case 69: sub_6E1A90
