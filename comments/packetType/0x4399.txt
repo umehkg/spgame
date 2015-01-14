@@ -1,0 +1,18 @@
+pType = 0x4399
+pSize = 0x18
+
+p+0x14 < dword switch -12 ~ 0
+
+0: Changes to player (%s) is completed.
+-1: GM password incorrect
+-2: Player ID (%s) is wrong.
+-3: This is not a GM account, GM function is not available.
+-4: Player (%s) has the same ID as GM.
+-5: Player (%s) is in the channel, recovery is possible.
+-6: Player (%s) is not login.
+-7: Player (%s) is a GM.
+-8: Player (%s) ban duration is wrong.
+-9: Player (%s) is being access by another Game Master.
+-10: Player (%s) is not logged in or disconnected.
+-11: Player (%s) is connected to another server. Please try again later.
+-12: Fail to connect server. Please contact us at our Customer Helpdesk.
