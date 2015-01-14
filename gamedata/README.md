@@ -17,7 +17,7 @@ Black Cards
 - 1321 Fire Magic
 - 1331 Earth Magic
 - 1341 Wind Magic
-- 
+
 - 1322 Water Magic (SS)
 
 Silver Cards
