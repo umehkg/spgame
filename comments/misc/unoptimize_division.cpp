@@ -32,3 +32,5 @@ long getDivisor(long magic, unsigned char shift)
   end:
 	}
 }
+//Example:
+printf("%ld\n", getDivisor(0x10624DD3L, 0x06)); //prints 1000
