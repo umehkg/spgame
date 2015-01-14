@@ -142,9 +142,9 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4308: case 6: sub_6DEAA0 "CreateRoom - End"
 - 0x4310: case 14: sub_6D8D40 MessageWnd/UserInfoWnd //cmp playerUsername
 - 0x4312: case 16: sub_6DCC50 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4312.txt">+</a> ; RoomInfoWnd <"Over Room Array Number", "CGameRoomInfoResultMsg - Result Type:%d">
-- 0x4314: case 18: sub_6DEC00 "JoinRoom - End"
-- 0x4317: case 21: sub_6F3F60 EnterRoom
-- 0x4319: case 23: sub_6DF0A0
+- 0x4314: case 18: sub_6DEC00 "JoinRoom - End" (RoomInfo)
+- 0x4317: case 21: sub_6F3F60 EnterRoom (PlayerInfo)
+- 0x4319: case 23: sub_6DF0A0 //ExitRoom (GameState == 3)
 - 0x4321: case 31: sub_6DF700
 - 0x4323: case 33: sub_6DF900
 - 0x4324: case 34: sub_6F6F30
