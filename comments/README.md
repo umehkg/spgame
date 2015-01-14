@@ -5,6 +5,7 @@ Comments
 - Heap Errors fixed by correcting the bounds
 - call sub_401A10 is display Announcement Wnd
 - CreateFunction sub_626C60 <"ioXMLDocument::CreateInstance - FAILED(%x)", "Msxml2.DOMDocument.4.0">
+- ^ call [edx+4] sub_62C830 ; <"ioWndManager::ProcessElement - Unknown Button Class %s", "CLASS_NAME", "BUTTON", "TABCONTROL", "TEXTLIST", "TABLISTWINDOW", "T>
 
 8 Jan 2015
 -----
