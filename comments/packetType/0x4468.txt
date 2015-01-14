@@ -1,0 +1,6 @@
+pSize = 0x20
+pType = 0x4468
+
+p+0x14 < case 1, 2, 3 (1: success)
+p+0x18 < used card position
+p+0x1C < new player slot count
