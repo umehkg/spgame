@@ -28,6 +28,9 @@ if( *(long*)&decryptBuff[4] == 0x4301){
 	char guildTitle[13] = "Developer";
 	long long playerCode = 1234567;
 	long long playerPoint = 7654321;
+	
+	long playerChannelType = 3; //the channel type player is currently in
+	
 	long playerLevel = 30;
 	long playerInventorySlots = 18;
 	long playerType = 0; //set to 7 for GM...
@@ -86,7 +89,7 @@ if( *(long*)&decryptBuff[4] == 0x4301){
 	memcpy(myData+0x880-0x14, &playerInventorySlots, 4);
 	memcpy(myData+0x884-0x14, &minPointForLevelDword[0], 4*29);
 	memcpy(myData+0x8F8-0x14, &minPointForLevelQword[0], 4*8);
-	memcpy(myData+0x918-0x14, new long(sizeof(playerCardItemExist)), 4);
+	memcpy(myData+0x918-0x14, &playerChannelType), 4);
 	memcpy(myData+0x91C-0x14, new long(0), 4); //"Software\\IOSPK\\Version" key: "sp"
 	memcpy(myData+0x920-0x14, new long(0), 4); //"Software\\IOSPK\\Version" key: "survivalproject"
 	memcpy(myData+0x924-0x14, new long(0), 4); //"Software\\IOSPK\\Version" key: "ioprotect"
