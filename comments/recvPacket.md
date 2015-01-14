@@ -186,7 +186,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4384: case 130: sub_6DA7B0
 - 0x4385: case 131: sub_6E25B0  ; <"Software\IOSPK\EVENT", "SPCARD">
 - 0x4387: case 133: sub_6DAAE0
-- 0x4389: case 135: sub_6DABF0
+- 0x4389: case 135: sub_6DABF0 Siege Wnd <-- View Guild Btn
 - 0x4390: case 142: sub_6DD490
 - 0x4391: case 143: sub_6E2BC0
 - 0x4393: case 145: sub_6DD570
