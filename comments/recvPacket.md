@@ -192,7 +192,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4393: case 145: sub_6DD570
 - 0x4395: case 147: sub_6F1F20; <"CGameBigBattleNpcAllMsg Rcv End", "CGameBigBattleNpcAllMsg Rcv Start 3", "CGameBigBattleNpcAllMsg 
 - 0x4397: case 149: sub_6F28F0
-- 0x4399: case 151: sub_6DAD80
+- 0x4399: case 151: sub_6DAD80 GMWnd AdminPage OK
 - 0x4403: case 257: sub_6DAF10
 - 0x4404: case 258: sub_6E2D50
 - 0x4405: case 259: sub_6DAFB0
@@ -245,6 +245,6 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4481: case 383: sub_6DCA20
 - 0x4483: case 385: sub_6DC570
 - 0x4485: case 387: sub_6DC5D0
-- 0x4487: case 389: sub_6DC6D0 +
+- 0x4487: case 389: sub_6DC6D0 + ; <"Guild Mark Lock Fail!">
 - 0x4488: case 390: sub_6DC700
 - 0x4490: case 398: sub_6EA540 <a href="https://github.com/umehkg/spgame/blob/master/comments/packetType/0x4490.txt">+</a>
