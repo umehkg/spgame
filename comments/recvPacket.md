@@ -146,7 +146,7 @@ Note: The caller of this function is CClientTCPSocket::ReceiveProcess<br />
 - 0x4317: case 21: sub_6F3F60 EnterRoom (PlayerInfo)
 - 0x4319: case 23: sub_6DF0A0 //ExitRoom (GameState == 3)
 - 0x4321: case 31: sub_6DF700
-- 0x4323: case 33: sub_6DF900
+- 0x4323: case 33: sub_6DF900 //ExitRoom (GameState == 4)
 - 0x4324: case 34: sub_6F6F30
 - 0x4326: case 36: sub_6D90E0
 - 0x4328: case 38: sub_6D9190
