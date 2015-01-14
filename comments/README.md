@@ -1,5 +1,9 @@
 Comments
 =====
+15 Jan 2015
+-----
+- [80DF4C] Card Shop Preview Item ID
+
 14 Jan 2015
 -----
 - Heap Errors fixed by correcting the bounds
