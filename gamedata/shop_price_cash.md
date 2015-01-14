@@ -1,7 +1,7 @@
 Item ID | Card Shop Price (cash) | Days | Description
 ---|---|---|---
 2004 | 5800 | One-use | Card Slot +6
-2005 | 9800 | One-use | Slot +12
+2005 | 9800 | One-use | Card Slot +12
 2501~2111 | 4500 | 365 | Premium Character Cards Separate
 2501~2111 | 1500 | 30 |
 2501~2111 | 750 | 7
