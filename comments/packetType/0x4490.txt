@@ -1,4 +1,5 @@
 p+0x14 case 2 GameState != 5
+case -3 kicks player to login screen, displays korean msg
 
 Summary:
 packetType = 0x4490
