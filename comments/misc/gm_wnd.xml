@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<WINDOW CLASS_NAME="GMWnd">
+	<NAME_ID NAME="GMWnd" ID="126"/>
+	<SIZE X="314" Y="123"/>
+	<DRAG_RECT LEFT="0" TOP="0" RIGHT="219" BOTTOM="33"/>
+	<NORMAL_IMAGE NAME="global\gm_wnd\wnd_gm.pgf" LOAD_TYPE="LOAD_SIZE"/>
+	<CLICK_IMAGE NAME="global\gm_wnd\wnd_gm.pgf"/>
+	<OVER_IMAGE NAME="global\gm_wnd\wnd_gm.pgf"/>
+	<STYLE>IWS_CANMOVE|IWS_BACKMOST</STYLE>
+	<CHILD_LIST>
+		<BUTTON CLASS_NAME="ioRadioButton">
+			<NAME_ID NAME="Disconnect" ID="1"/>
+			<SIZE X="17" Y="133"/>
+			<NORMAL_IMAGE NAME="global\gm_wnd\btn_disconnect_n.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<CLICK_IMAGE NAME="global\gm_wnd\btn_disconnect_c.pgf"/>
+			<OVER_IMAGE NAME="global\gm_wnd\btn_disconnect_o.pgf"/>
+			<STYLE>IWS_BACKMOST</STYLE>
+			<EXTRA_INFO SZHELP="유저 접속 종료"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioRadioButton">
+			<NAME_ID NAME="ChatBlock" ID="2"/>
+			<SIZE X="80" Y="133"/>
+			<NORMAL_IMAGE NAME="global\gm_wnd\btn_chatblock_n.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<CLICK_IMAGE NAME="global\gm_wnd\btn_chatblock_c.pgf"/>
+			<OVER_IMAGE NAME="global\gm_wnd\btn_chatblock_o.pgf"/>
+			<STYLE>IWS_BACKMOST</STYLE>
+			<EXTRA_INFO SZHELP="유저 채팅 블럭"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioRadioButton">
+			<NAME_ID NAME="AccountBlock" ID="3"/>
+			<SIZE X="143" Y="133"/>
+			<NORMAL_IMAGE NAME="global\gm_wnd\btn_accountblock_n.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<CLICK_IMAGE NAME="global\gm_wnd\btn_accountblock_c.pgf"/>
+			<OVER_IMAGE NAME="global\gm_wnd\btn_accountblock_o.pgf"/>
+			<STYLE>IWS_BACKMOST</STYLE>
+			<EXTRA_INFO SZHELP="유저 계정 블럭"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Day3" ID="101"/>
+			<SIZE X="63" Y="85"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="3일 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Day7" ID="102"/>
+			<SIZE X="126" Y="85"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="7일 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Day10" ID="103"/>
+			<SIZE X="189" Y="85"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="10일 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Day15" ID="104"/>
+			<SIZE X="63" Y="106"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="15일 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Day30" ID="105"/>
+			<SIZE X="126" Y="106"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="30일 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioCheckButton">
+			<NAME_ID NAME="Eternity" ID="106"/>
+			<SIZE X="189" Y="106"/>
+			<NORMAL_IMAGE NAME="lobby\room_make_wnd\btn_check.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<EXTRA_INFO SZHELP="영구 제한"/>
+		</BUTTON>
+		<BUTTON CLASS_NAME="ioButton">
+			<NAME_ID NAME="x_Button" ID="10"/>
+			<SIZE X="189" Y="5"/>
+			<NORMAL_IMAGE NAME="global\btn_x_normal.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<CLICK_IMAGE NAME="global\btn_x_click.pgf"/>
+			<OVER_IMAGE NAME="global\btn_x_normal.pgf" DRAW_TYPE="DRAW_SCREEN_PLUS"/>
+			<EXTRA_INFO SZHELP="창닫기(ESC)"/>
+		</BUTTON>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="UserIdEdit" ID="11"/>
+			<SIZE X="78" Y="45" WIDTH="85" HEIGHT="12"/>
+			<EXTRA_INFO MAX_LEN = "12" R="244" G="241" B="226"/>
+		</EDIT>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="GMPasswordEdit" ID="12"/>
+			<SIZE X="73" Y="292" WIDTH="85" HEIGHT="12"/>
+			<EXTRA_INFO MAX_LEN = "12" R="244" G="241" B="226"/>
+			<EX_STYLE>IWS_EX_EDIT_PW</EX_STYLE>
+		</EDIT>
+		<BUTTON CLASS_NAME="ioButton">
+			<NAME_ID NAME="x_Button" ID="13"/>
+			<SIZE X="78" Y="318"/>
+			<NORMAL_IMAGE NAME="global\btn_ok_normal.pgf" LOAD_TYPE="LOAD_SIZE"/>
+			<CLICK_IMAGE NAME="global\btn_ok_click.pgf"/>
+			<OVER_IMAGE NAME="global\btn_ok_normal.pgf" DRAW_TYPE="DRAW_SCREEN_PLUS"/>
+			<EXTRA_INFO SZHELP="유저를 블럭합니다."/>
+		</BUTTON>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="Cause1Edit" ID="14"/>
+			<SIZE X="52" Y="212" WIDTH="180" HEIGHT="11"/>
+			<EXTRA_INFO MAX_LEN = "26" R="244" G="241" B="226"/>
+		</EDIT>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="Cause2Edit" ID="15"/>
+			<SIZE X="17" Y="229" WIDTH="180" HEIGHT="11"/>
+			<EXTRA_INFO MAX_LEN = "32" R="244" G="241" B="226"/>
+		</EDIT>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="Cause3Edit" ID="16"/>
+			<SIZE X="17" Y="246" WIDTH="180" HEIGHT="11"/>
+			<EXTRA_INFO MAX_LEN = "32" R="244" G="241" B="226"/>
+		</EDIT>
+		<EDIT CLASS_NAME="ioEdit">
+			<NAME_ID NAME="Cause4Edit" ID="17"/>
+			<SIZE X="17" Y="263" WIDTH="180" HEIGHT="11"/>
+			<EXTRA_INFO MAX_LEN = "10" R="244" G="241" B="226"/>
+		</EDIT>
+	</CHILD_LIST>
+</WINDOW>
