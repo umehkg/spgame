@@ -1,0 +1,19 @@
+pSize = 0x58
+pType = 0x4343
+
+p+0x14 <
+p+0x18 <
+p+0x1C < case 7,8,9,4 (4:valid ?),1
+p+0x20 <
+p+0x24 <
+p+0x28 <
+p+0x2C <
+p+0x30 <
+p+0x34 < FusionResult: 3,4,5,6,7,8,9,else,1
+p+0x38 <
+
+p+0x40 < QWORD new playerCode
+p+0x48 < new water card count
+p+0x4C < new fire card count
+p+0x50 < new earth card count
+p+0x54 < new wind card count
